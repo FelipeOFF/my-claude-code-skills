@@ -59,7 +59,8 @@ Installed via Claude Code's `/plugin` command system.
 
 ### Superpowers (v5.0.0)
 
-> Source: [superpowers-marketplace](https://github.com/supermaven-inc/superpowers)
+> **Source:** [github.com/obra/superpowers](https://github.com/obra/superpowers)
+> **Marketplace:** [github.com/obra/superpowers-marketplace](https://github.com/obra/superpowers-marketplace)
 
 | Skill | When to Use |
 |-------|-------------|
@@ -79,7 +80,7 @@ Installed via Claude Code's `/plugin` command system.
 
 ### Frontend Design
 
-> Source: Anthropic Official Marketplace
+> **Source:** Anthropic Official Marketplace
 
 | Skill | When to Use |
 |-------|-------------|
@@ -87,7 +88,7 @@ Installed via Claude Code's `/plugin` command system.
 
 ### Agent SDK Dev
 
-> Source: Anthropic Official Marketplace
+> **Source:** Anthropic Official Marketplace
 
 | Skill | When to Use |
 |-------|-------------|
@@ -97,7 +98,7 @@ Installed via Claude Code's `/plugin` command system.
 
 ### Stripe
 
-> Source: Anthropic Official Marketplace
+> **Source:** Anthropic Official Marketplace
 
 | Skill | When to Use |
 |-------|-------------|
@@ -107,7 +108,7 @@ Installed via Claude Code's `/plugin` command system.
 
 ### Claude Mem
 
-> Source: [thedotmack marketplace](https://github.com/thedotmack)
+> **Source:** [github.com/thedotmack/claude-mem](https://github.com/thedotmack/claude-mem)
 
 | Skill | When to Use |
 |-------|-------------|
@@ -118,7 +119,7 @@ Installed via Claude Code's `/plugin` command system.
 
 ### Firebase
 
-> Source: Google/Firebase Marketplace
+> **Source:** Google/Firebase Marketplace
 
 Full Firebase toolset: Auth, Firestore, Realtime Database, Storage, Remote Config, Messaging, and project management.
 
@@ -235,7 +236,8 @@ AI-powered design intelligence for building professional UIs:
 
 ## ECC — Everything Claude Code
 
-> **Install:** `npx skills add` (individual skills)
+> **Source:** [github.com/anthropics/ecc](https://github.com/anthropics/ecc)
+> **Monorepo:** [github.com/affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code)
 
 A large collection of general-purpose development skills.
 
@@ -243,90 +245,90 @@ A large collection of general-purpose development skills.
 
 | Skill | Description |
 |-------|-------------|
-| `api-design` | REST API patterns — resource naming, status codes, pagination, error responses |
-| `backend-patterns` | Backend architecture, API design, database optimization (Node.js, Express, Next.js) |
-| `frontend-patterns` | React, Next.js, state management, performance optimization |
-| `coding-standards` | Universal coding standards for TypeScript, JavaScript, React, Node.js |
+| [`api-design`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/api-design) | REST API patterns — resource naming, status codes, pagination, error responses |
+| [`backend-patterns`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/backend-patterns) | Backend architecture, API design, database optimization (Node.js, Express, Next.js) |
+| [`frontend-patterns`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/frontend-patterns) | React, Next.js, state management, performance optimization |
+| [`coding-standards`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/coding-standards) | Universal coding standards for TypeScript, JavaScript, React, Node.js |
 
 ### Python
 
 | Skill | Description |
 |-------|-------------|
-| `python-patterns` | Pythonic idioms, PEP 8, type hints, best practices |
-| `python-testing` | pytest, TDD, fixtures, mocking, parametrization, coverage |
+| [`python-patterns`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/python-patterns) | Pythonic idioms, PEP 8, type hints, best practices |
+| [`python-testing`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/python-testing) | pytest, TDD, fixtures, mocking, parametrization, coverage |
 
 ### Django
 
 | Skill | Description |
 |-------|-------------|
-| `django-patterns` | Django architecture, DRF, ORM, caching, signals, middleware |
-| `django-security` | Authentication, authorization, CSRF, SQL injection, XSS prevention |
-| `django-tdd` | Testing with pytest-django, factory_boy, mocking, coverage |
-| `django-verification` | Migrations, linting, tests, security scans, deployment readiness |
+| [`django-patterns`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/django-patterns) | Django architecture, DRF, ORM, caching, signals, middleware |
+| [`django-security`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/django-security) | Authentication, authorization, CSRF, SQL injection, XSS prevention |
+| [`django-tdd`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/django-tdd) | Testing with pytest-django, factory_boy, mocking, coverage |
+| [`django-verification`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/django-verification) | Migrations, linting, tests, security scans, deployment readiness |
 
 ### C++
 
 | Skill | Description |
 |-------|-------------|
-| `cpp-coding-standards` | C++ Core Guidelines — modern, safe, idiomatic practices |
-| `cpp-testing` | GoogleTest/CTest, failing/flaky tests, coverage/sanitizers |
+| [`cpp-coding-standards`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/cpp-coding-standards) | C++ Core Guidelines — modern, safe, idiomatic practices |
+| [`cpp-testing`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/cpp-testing) | GoogleTest/CTest, failing/flaky tests, coverage/sanitizers |
 
 ### Databases
 
 | Skill | Description |
 |-------|-------------|
-| `postgres-patterns` | PostgreSQL query optimization, schema design, indexing, security |
-| `clickhouse-io` | ClickHouse analytics, query optimization, data engineering |
-| `database-migrations` | Schema changes, data migrations, rollbacks, zero-downtime deployments |
+| [`postgres-patterns`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/postgres-patterns) | PostgreSQL query optimization, schema design, indexing, security |
+| [`clickhouse-io`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/clickhouse-io) | ClickHouse analytics, query optimization, data engineering |
+| [`database-migrations`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/database-migrations) | Schema changes, data migrations, rollbacks, zero-downtime deployments |
 
 ### Testing & Quality
 
 | Skill | Description |
 |-------|-------------|
-| `tdd-workflow` | TDD with 80%+ coverage — unit, integration, E2E |
-| `e2e-testing` | Playwright, Page Object Model, CI/CD, artifact management |
-| `verification-loop` | Comprehensive verification system for Claude Code sessions |
-| `eval-harness` | Eval-driven development (EDD) framework |
+| [`tdd-workflow`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/tdd-workflow) | TDD with 80%+ coverage — unit, integration, E2E |
+| [`e2e-testing`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/e2e-testing) | Playwright, Page Object Model, CI/CD, artifact management |
+| [`verification-loop`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/verification-loop) | Comprehensive verification system for Claude Code sessions |
+| [`eval-harness`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/eval-harness) | Eval-driven development (EDD) framework |
 
 ### DevOps & Infrastructure
 
 | Skill | Description |
 |-------|-------------|
-| `docker-patterns` | Docker/Compose for local dev, container security, networking |
-| `deployment-patterns` | CI/CD pipelines, health checks, rollback strategies |
-| `security-review` | Security checklist for auth, user input, secrets, API endpoints |
-| `security-scan` | AgentShield config scanning for `~/.claude/` |
+| [`docker-patterns`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/docker-patterns) | Docker/Compose for local dev, container security, networking |
+| [`deployment-patterns`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/deployment-patterns) | CI/CD pipelines, health checks, rollback strategies |
+| [`security-review`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/security-review) | Security checklist for auth, user input, secrets, API endpoints |
+| [`security-scan`](https://github.com/affaan-m/agentshield) | AgentShield config scanning for `~/.claude/` |
 
 ### AI & LLM
 
 | Skill | Description |
 |-------|-------------|
-| `cost-aware-llm-pipeline` | Model routing by task complexity, budget tracking, prompt caching |
-| `regex-vs-llm-structured-text` | Decision framework: regex vs LLM for parsing structured text |
+| [`cost-aware-llm-pipeline`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/cost-aware-llm-pipeline) | Model routing by task complexity, budget tracking, prompt caching |
+| [`regex-vs-llm-structured-text`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/regex-vs-llm-structured-text) | Decision framework: regex vs LLM for parsing structured text |
 
 ### Content & Writing
 
 | Skill | Description |
 |-------|-------------|
-| `article-writing` | Long-form content with distinctive voice |
-| `content-engine` | Multi-platform content systems (X, LinkedIn, TikTok, YouTube) |
-| `investor-materials` | Pitch decks, one-pagers, memos, financial models |
-| `investor-outreach` | Cold emails, warm intros, follow-ups for fundraising |
-| `market-research` | Market sizing, competitor analysis, industry intelligence |
+| [`article-writing`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/article-writing) | Long-form content with distinctive voice |
+| [`content-engine`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/content-engine) | Multi-platform content systems (X, LinkedIn, TikTok, YouTube) |
+| [`investor-materials`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/investor-materials) | Pitch decks, one-pagers, memos, financial models |
+| [`investor-outreach`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/investor-outreach) | Cold emails, warm intros, follow-ups for fundraising |
+| [`market-research`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/market-research) | Market sizing, competitor analysis, industry intelligence |
 
 ### Workflow & Meta
 
 | Skill | Description |
 |-------|-------------|
-| `search-first` | Research-before-coding workflow |
-| `iterative-retrieval` | Progressive context retrieval pattern |
-| `continuous-learning` | Auto-extract patterns from sessions |
-| `continuous-learning-v2` | Instinct-based learning with confidence scoring |
-| `strategic-compact` | Manual context compaction at logical intervals |
-| `content-hash-cache-pattern` | SHA-256 content hash caching for expensive file processing |
-| `configure-ecc` | Interactive ECC installer |
-| `project-guidelines-example` | Example project-specific skill template |
-| `frontend-slides` | HTML presentations from scratch or PowerPoint conversion |
+| [`search-first`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/search-first) | Research-before-coding workflow |
+| [`iterative-retrieval`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/iterative-retrieval) | Progressive context retrieval pattern |
+| [`continuous-learning`](https://github.com/blader/claude-code-continuous-learning-skill) | Auto-extract patterns from sessions |
+| [`continuous-learning-v2`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/continuous-learning-v2) | Instinct-based learning with confidence scoring |
+| [`strategic-compact`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/strategic-compact) | Manual context compaction at logical intervals |
+| [`content-hash-cache-pattern`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/content-hash-cache-pattern) | SHA-256 content hash caching for expensive file processing |
+| [`configure-ecc`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/configure-ecc) | Interactive ECC installer |
+| [`project-guidelines-example`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/project-guidelines-example) | Example project-specific skill template |
+| [`frontend-slides`](https://github.com/zarazhangrui/frontend-slides) | HTML presentations from scratch or PowerPoint conversion |
 
 ---
 
@@ -392,7 +394,7 @@ General-purpose skills without explicit origin metadata. Installed via `~/.claud
 | `project-planner` | Task breakdowns, timelines, dependencies |
 | `sprint-planner` | Agile sprint planning, story estimation |
 | `ux-designer` | User research, wireframing, prototyping |
-| `design-advisor` | Design guidance and review |
+| [`design-advisor`](https://github.com/FelipeOFF/design-advisor-skill) | Industry-specific UI/UX design recommendations with 550+ rules, 50 color palettes, 30+ font pairings |
 
 ### Utilities
 
@@ -408,13 +410,15 @@ Skills created specifically for my workflow.
 
 | Skill | Description | Repo |
 |-------|-------------|------|
-| `frontend-project-style` | Configurable design system and style guide for frontend projects. Auto-generates `PROJECT_STYLE.md` with your design tokens on first use. | [FelipeOFF/frontend-project-style-skill](https://github.com/FelipeOFF/frontend-project-style-skill) |
+| [`frontend-project-style`](https://github.com/FelipeOFF/frontend-project-style-skill) | Configurable design system and style guide for frontend projects. Auto-generates `PROJECT_STYLE.md` with your design tokens on first use. | [FelipeOFF/frontend-project-style-skill](https://github.com/FelipeOFF/frontend-project-style-skill) |
+| [`design-advisor`](https://github.com/FelipeOFF/design-advisor-skill) | Industry-specific UI/UX design recommendations with 550+ rules, 50 color palettes, 30+ font pairings, and real component examples. | [FelipeOFF/design-advisor-skill](https://github.com/FelipeOFF/design-advisor-skill) |
 
 ---
 
 ## ByteRover
 
-> Installed in `~/.claude/skills/byterover/`
+> **Source:** [github.com/trietdeptrai/Byterover-Claude-Codex-Collaboration-](https://github.com/trietdeptrai/Byterover-Claude-Codex-Collaboration-)
+> **Installed in:** `~/.claude/skills/byterover/`
 
 | Skill | Description |
 |-------|-------------|
@@ -445,12 +449,15 @@ uipro init --ai claude
 
 # 4. Install Frontend Project Style
 npx skills add git@github.com:FelipeOFF/frontend-project-style-skill.git
+
+# 5. Install Design Advisor
+npx skills add git@github.com:FelipeOFF/design-advisor-skill.git
 ```
 
 Then inside Claude Code:
 
 ```
-# 5. Install marketplace plugins
+# 6. Install marketplace plugins
 /plugin marketplace add superpowers
 /plugin install superpowers@superpowers
 
