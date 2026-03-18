@@ -13,6 +13,7 @@ A curated collection of **130+ skills** installed in my Claude Code setup. This 
 - [GSD — Get Shit Done](#gsd--get-shit-done)
 - [Obsidian Skills](#obsidian-skills)
 - [UI/UX Pro Max](#uiux-pro-max)
+- [21st.dev — Magic MCP](#21stdev--magic-mcp)
 - [ECC — Everything Claude Code](#ecc--everything-claude-code)
 - [Community Skills](#community-skills)
 - [Custom Skills](#custom-skills)
@@ -231,6 +232,26 @@ AI-powered design intelligence for building professional UIs:
 - **161 industry-specific reasoning rules** (SaaS, fintech, healthcare, e-commerce)
 - **13 supported tech stacks** (React, Next.js, Vue, Svelte, SwiftUI, Flutter, etc.)
 - **25 chart types** for data visualization
+
+Integrates with [21st.dev](https://21st.dev/) MCP for component search, examples, and inspiration.
+
+---
+
+## 21st.dev — Magic MCP
+
+> **Source:** [21st.dev](https://21st.dev/)
+> **MCP Tool:** Available as `mcp__magic__21st_magic_component_builder`, `mcp__magic__21st_magic_component_inspiration`, `mcp__magic__21st_magic_component_refiner`, and `mcp__magic__logo_search`
+
+AI-powered component generation and design inspiration platform. Provides:
+
+| Tool | Description |
+|------|-------------|
+| `21st_magic_component_builder` | Generate production-ready UI components from natural language descriptions |
+| `21st_magic_component_inspiration` | Browse and get inspiration from a curated library of UI components |
+| `21st_magic_component_refiner` | Refine and improve existing components with AI assistance |
+| `logo_search` | Search for logos and brand assets |
+
+Works as an MCP server connected to Claude Code, providing real-time component generation and design system integration.
 
 ---
 
