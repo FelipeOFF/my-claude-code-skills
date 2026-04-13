@@ -17,6 +17,7 @@ A curated collection of **130+ skills** installed in my Claude Code setup. This 
 - [ECC — Everything Claude Code](#ecc--everything-claude-code)
 - [Community Skills](#community-skills)
 - [Custom Skills](#custom-skills)
+- [Personal Rules, Commands & Agents](#personal-rules-commands--agents)
 - [ByteRover](#byterover)
 - [Installation Guide](#installation-guide)
 
@@ -433,6 +434,64 @@ Skills created specifically for my workflow.
 |-------|-------------|------|
 | [`frontend-project-style`](https://github.com/FelipeOFF/frontend-project-style-skill) | Configurable design system and style guide for frontend projects. Auto-generates `PROJECT_STYLE.md` with your design tokens on first use. | [FelipeOFF/frontend-project-style-skill](https://github.com/FelipeOFF/frontend-project-style-skill) |
 | [`design-advisor`](https://github.com/FelipeOFF/design-advisor-skill) | Industry-specific UI/UX design recommendations with 550+ rules, 50 color palettes, 30+ font pairings, and real component examples. | [FelipeOFF/design-advisor-skill](https://github.com/FelipeOFF/design-advisor-skill) |
+
+---
+
+## Personal Rules, Commands & Agents
+
+The `rules/`, `commands/`, and `agents/` directories in this repo are **reusable templates** you can drop into `~/.claude/` to enforce consistent git workflows, commit formats, branch naming, and PR discipline across every project.
+
+They are designed to be **project-agnostic**: they use `PROJ-123` as a placeholder for your Jira prefix, and assume nothing about your language stack or editor.
+
+### What's in the box
+
+| Path | Purpose |
+|---|---|
+| [`rules/commits.md`](./rules/commits.md) | Conventional Commits + Jira format (`<type>(<JIRA>): <title>` + detailed body) |
+| [`rules/branches.md`](./rules/branches.md) | Branch naming (`<type>/<JIRA>/<slug>`) with validation regex |
+| [`rules/workflow.md`](./rules/workflow.md) | Git hygiene, worktrees, checkpointing, verification-before-done |
+| [`rules/language.md`](./rules/language.md) | Template for pinning a non-English default response language |
+| [`commands/commit.md`](./commands/commit.md) | `/commit` — drafts a commit, extracts Jira from branch, requires approval |
+| [`commands/branch.md`](./commands/branch.md) | `/branch` — creates a validated branch from loose args |
+| [`commands/pr.md`](./commands/pr.md) | `/pr` — opens PR via `gh` with structured Summary/Changes/Test plan |
+| [`commands/review.md`](./commands/review.md) | `/review` — runs lint + type-check + tests for the detected stack |
+| [`commands/wt.md`](./commands/wt.md) | `/wt` — creates a `git worktree` for isolated parallel work |
+| [`agents/commit-crafter.md`](./agents/commit-crafter.md) | Subagent that builds Conventional Commits + Jira messages |
+| [`agents/pr-writer.md`](./agents/pr-writer.md) | Subagent that writes structured PR bodies from `git diff` |
+| [`agents/jira-linker.md`](./agents/jira-linker.md) | Lightweight subagent that detects Jira codes from branch/commit/prompt |
+
+### How to install
+
+```bash
+# Clone or copy just the folders you want
+git clone https://github.com/FelipeOFF/my-claude-code-skills.git /tmp/mccs
+mkdir -p ~/.claude/rules ~/.claude/commands ~/.claude/agents
+cp /tmp/mccs/rules/*.md    ~/.claude/rules/
+cp /tmp/mccs/commands/*.md ~/.claude/commands/
+cp /tmp/mccs/agents/*.md   ~/.claude/agents/
+```
+
+Then reference the rules from your `~/.claude/CLAUDE.md`:
+
+```markdown
+@~/.claude/rules/commits.md
+@~/.claude/rules/branches.md
+@~/.claude/rules/workflow.md
+```
+
+### Customizing
+
+- **Jira prefix**: search-replace `PROJ-` in `rules/commits.md`, `rules/branches.md` and the agents with your org prefix (e.g., `ENG-`, `API-`).
+- **Language**: edit `rules/language.md` and rename it to reflect your preferred language.
+- **Allowed types**: `rules/commits.md` ships with the full Conventional Commits set — trim it if your org uses a smaller vocabulary.
+
+### Why rules + commands + agents together?
+
+- **Rules** are static constraints loaded into every session (single source of truth).
+- **Commands** (`/commit`, `/pr`, ...) give you muscle-memory triggers for the workflows that enforce the rules.
+- **Agents** give those workflows isolated context windows so they don't pollute your main conversation.
+
+This mirrors the Command → Agent → Skill orchestration pattern popularized by [shanraisshan/claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice).
 
 ---
 
