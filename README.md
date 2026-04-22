@@ -10,6 +10,8 @@ A curated collection of **130+ skills** installed in my Claude Code setup. This 
 
 - [Quick Setup](#quick-setup)
 - [Plugins & Marketplaces](#plugins--marketplaces)
+- [Oh My Claude Code (OMC)](#oh-my-claude-code-omc)
+- [Codex (OpenAI)](#codex-openai)
 - [GSD — Get Shit Done](#gsd--get-shit-done)
 - [Obsidian Skills](#obsidian-skills)
 - [UI/UX Pro Max](#uiux-pro-max)
@@ -51,6 +53,10 @@ npx skills add git@github.com:FelipeOFF/frontend-project-style-skill.git
 # /plugin install claude-mem
 # /plugin marketplace add firebase
 # /plugin install firebase
+# /plugin marketplace add https://github.com/Yeachan-Heo/oh-my-claudecode
+# /plugin install oh-my-claudecode
+# /plugin marketplace add openai-codex
+# /plugin install codex@openai-codex
 ```
 
 ---
@@ -119,11 +125,105 @@ Installed via Claude Code's `/plugin` command system.
 | `smart-explore` | Token-optimized structural code search using tree-sitter AST |
 | `do` | Execute phased plans using subagents |
 
+### LSP Plugins (TypeScript / Rust)
+
+> **Source:** Anthropic Official Marketplace
+
+| Plugin | Purpose |
+|--------|---------|
+| `typescript-lsp` | TypeScript language server integration |
+| `rust-analyzer-lsp` | Rust language server integration |
+
 ### Firebase
 
 > **Source:** Google/Firebase Marketplace
 
 Full Firebase toolset: Auth, Firestore, Realtime Database, Storage, Remote Config, Messaging, and project management.
+
+---
+
+## Oh My Claude Code (OMC)
+
+> **Source:** [github.com/Yeachan-Heo/oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode)
+> **Marketplace:** `omc`
+> **Install:** `/plugin marketplace add https://github.com/Yeachan-Heo/oh-my-claudecode` then `/plugin install oh-my-claudecode`
+
+A large collection of orchestration, autonomy, and developer-experience skills.
+
+### Orchestration & Autonomy
+
+| Skill | Description |
+|-------|-------------|
+| `autopilot` | Full autonomous execution from idea to working code |
+| `ralph` | Self-referential loop until task completion with configurable verification reviewer |
+| `ralplan` | Consensus planning entrypoint that auto-gates vague ralph/autopilot/team requests |
+| `ultrawork` | Parallel execution engine for high-throughput task completion |
+| `ultraqa` | QA cycling workflow — test, verify, fix, repeat until goal met |
+| `team` | N coordinated agents on shared task list using Claude Code native teams |
+| `omc-teams` | CLI-team runtime for claude/codex/gemini workers in tmux panes |
+| `ccg` | Claude-Codex-Gemini tri-model orchestration |
+| `sciomc` | Parallel scientist agents for comprehensive analysis with AUTO mode |
+| `self-improve` | Autonomous evolutionary code improvement engine with tournament selection |
+| `autoresearch` | Stateful single-mission improvement loop with max-run cap |
+| `cancel` | Cancel any active OMC mode |
+
+### Planning & Interview
+
+| Skill | Description |
+|-------|-------------|
+| `plan` | Strategic planning with optional interview workflow |
+| `deep-interview` | Socratic deep interview with mathematical ambiguity gating before autonomous execution |
+| `deep-dive` | 2-stage pipeline: trace (causal investigation) → deep-interview |
+| `trace` | Evidence-driven tracing lane orchestrating competing tracer hypotheses |
+| `debug` | Diagnose current OMC session or repo state using logs, traces, and focused reproduction |
+| `verify` | Verify that a change really works before claiming completion |
+| `ask` | Process-first advisor routing for Claude, Codex, or Gemini via `omc ask` |
+
+### Knowledge & Memory
+
+| Skill | Description |
+|-------|-------------|
+| `remember` | Review reusable project knowledge — decide what belongs in memory, notepad, or docs |
+| `wiki` | LLM Wiki — persistent markdown knowledge base that compounds across sessions |
+| `writer-memory` | Agentic memory system for writers — characters, relationships, scenes, themes |
+| `external-context` | Parallel document-specialist agents for external web/doc lookup |
+| `visual-verdict` | Structured visual QA verdict for screenshot-to-reference comparisons |
+
+### Setup & Infra
+
+| Skill | Description |
+|-------|-------------|
+| `setup` | Install/update routing entrypoint for OMC |
+| `omc-setup` | Canonical OMC install flow for plugin/npm/local-dev setups |
+| `omc-doctor` | Diagnose and fix oh-my-claudecode installation issues |
+| `omc-reference` | OMC agent catalog, tools, team pipelines, commit protocol |
+| `mcp-setup` | Configure popular MCP servers |
+| `configure-notifications` | Configure Telegram / Discord / Slack integrations via natural language |
+| `hud` | Configure HUD display options |
+| `skill` | Manage local skills — list, add, remove, search, edit, setup wizard |
+| `skillify` | Turn a repeatable workflow into a reusable OMC skill draft |
+| `learner` | Extract a learned skill from the current conversation |
+| `deepinit` | Deep codebase initialization with hierarchical `AGENTS.md` documentation |
+| `project-session-manager` | Worktree-first dev environment manager for issues/PRs/features with tmux |
+| `release` | Generic release assistant — caches repo release rules in `.omc/RELEASE_RULE.md` |
+| `ai-slop-cleaner` | Clean AI-generated code slop with regression-safe, deletion-first workflow |
+
+---
+
+## Codex (OpenAI)
+
+> **Marketplace:** `openai-codex`
+> **Install:** `/plugin install codex@openai-codex`
+
+Delegate investigations and second-opinion implementations to the Codex CLI.
+
+| Skill | Description |
+|-------|-------------|
+| `rescue` | Delegate investigation, fix requests, or follow-up rescue work to the Codex rescue subagent |
+| `setup` | Check whether the local Codex CLI is ready and optionally toggle the stop-time review gate |
+| `gpt-5-4-prompting` | Internal guidance for composing Codex / GPT-5.4 prompts |
+| `codex-result-handling` | Internal guidance for presenting Codex helper output back to the user |
+| `codex-cli-runtime` | Internal helper contract for calling the codex-companion runtime |
 
 ---
 
@@ -451,6 +551,7 @@ They are designed to be **project-agnostic**: they use `PROJ-123` as a placehold
 | [`rules/branches.md`](./rules/branches.md) | Branch naming (`<type>/<JIRA>/<slug>`) with validation regex |
 | [`rules/workflow.md`](./rules/workflow.md) | Git hygiene, worktrees, checkpointing, verification-before-done |
 | [`rules/language.md`](./rules/language.md) | Template for pinning a non-English default response language |
+| [`rules/context7.md`](./rules/context7.md) | When to use the Context7 MCP for live library / framework / SDK docs |
 | [`commands/commit.md`](./commands/commit.md) | `/commit` — drafts a commit, extracts Jira from branch, requires approval |
 | [`commands/branch.md`](./commands/branch.md) | `/branch` — creates a validated branch from loose args |
 | [`commands/pr.md`](./commands/pr.md) | `/pr` — opens PR via `gh` with structured Summary/Changes/Test plan |
@@ -551,6 +652,12 @@ Then inside Claude Code:
 
 /plugin marketplace add firebase
 /plugin install firebase
+
+/plugin marketplace add https://github.com/Yeachan-Heo/oh-my-claudecode
+/plugin install oh-my-claudecode
+
+/plugin marketplace add openai-codex
+/plugin install codex@openai-codex
 ```
 
 ### Verify Installation
