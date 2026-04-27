@@ -10,7 +10,6 @@ A curated collection of **130+ skills** installed in my Claude Code setup. This 
 
 - [Quick Setup](#quick-setup)
 - [Plugins & Marketplaces](#plugins--marketplaces)
-- [Oh My Claude Code (OMC)](#oh-my-claude-code-omc)
 - [Codex (OpenAI)](#codex-openai)
 - [GSD — Get Shit Done](#gsd--get-shit-done)
 - [Obsidian Skills](#obsidian-skills)
@@ -18,6 +17,7 @@ A curated collection of **130+ skills** installed in my Claude Code setup. This 
 - [21st.dev — Magic MCP](#21stdev--magic-mcp)
 - [ECC — Everything Claude Code](#ecc--everything-claude-code)
 - [Community Skills](#community-skills)
+- [Marketing Skills](#marketing-skills)
 - [Custom Skills](#custom-skills)
 - [Personal Rules, Commands & Agents](#personal-rules-commands--agents)
 - [ByteRover](#byterover)
@@ -53,10 +53,10 @@ npx skills add git@github.com:FelipeOFF/frontend-project-style-skill.git
 # /plugin install claude-mem
 # /plugin marketplace add firebase
 # /plugin install firebase
-# /plugin marketplace add https://github.com/Yeachan-Heo/oh-my-claudecode
-# /plugin install oh-my-claudecode
 # /plugin marketplace add openai-codex
 # /plugin install codex@openai-codex
+# /plugin marketplace add nowork-studio/toprank
+# /plugin install toprank
 ```
 
 ---
@@ -140,73 +140,27 @@ Installed via Claude Code's `/plugin` command system.
 
 Full Firebase toolset: Auth, Firestore, Realtime Database, Storage, Remote Config, Messaging, and project management.
 
----
+### TopRank
 
-## Oh My Claude Code (OMC)
+> **Source:** [github.com/nowork-studio/toprank](https://github.com/nowork-studio/toprank)
+> **Install:** `/plugin marketplace add nowork-studio/toprank` then `/plugin install toprank`
 
-> **Source:** [github.com/Yeachan-Heo/oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode)
-> **Marketplace:** `omc`
-> **Install:** `/plugin marketplace add https://github.com/Yeachan-Heo/oh-my-claudecode` then `/plugin install oh-my-claudecode`
-
-A large collection of orchestration, autonomy, and developer-experience skills.
-
-### Orchestration & Autonomy
+Suite de skills focada em SEO técnico, on-page e Google Ads — auditoria, pesquisa de keywords, geração de conteúdo otimizado, structured data e gerenciamento de campanhas pagas dentro do Claude Code.
 
 | Skill | Description |
 |-------|-------------|
-| `autopilot` | Full autonomous execution from idea to working code |
-| `ralph` | Self-referential loop until task completion with configurable verification reviewer |
-| `ralplan` | Consensus planning entrypoint that auto-gates vague ralph/autopilot/team requests |
-| `ultrawork` | Parallel execution engine for high-throughput task completion |
-| `ultraqa` | QA cycling workflow — test, verify, fix, repeat until goal met |
-| `team` | N coordinated agents on shared task list using Claude Code native teams |
-| `omc-teams` | CLI-team runtime for claude/codex/gemini workers in tmux panes |
-| `ccg` | Claude-Codex-Gemini tri-model orchestration |
-| `sciomc` | Parallel scientist agents for comprehensive analysis with AUTO mode |
-| `self-improve` | Autonomous evolutionary code improvement engine with tournament selection |
-| `autoresearch` | Stateful single-mission improvement loop with max-run cap |
-| `cancel` | Cancel any active OMC mode |
-
-### Planning & Interview
-
-| Skill | Description |
-|-------|-------------|
-| `plan` | Strategic planning with optional interview workflow |
-| `deep-interview` | Socratic deep interview with mathematical ambiguity gating before autonomous execution |
-| `deep-dive` | 2-stage pipeline: trace (causal investigation) → deep-interview |
-| `trace` | Evidence-driven tracing lane orchestrating competing tracer hypotheses |
-| `debug` | Diagnose current OMC session or repo state using logs, traces, and focused reproduction |
-| `verify` | Verify that a change really works before claiming completion |
-| `ask` | Process-first advisor routing for Claude, Codex, or Gemini via `omc ask` |
-
-### Knowledge & Memory
-
-| Skill | Description |
-|-------|-------------|
-| `remember` | Review reusable project knowledge — decide what belongs in memory, notepad, or docs |
-| `wiki` | LLM Wiki — persistent markdown knowledge base that compounds across sessions |
-| `writer-memory` | Agentic memory system for writers — characters, relationships, scenes, themes |
-| `external-context` | Parallel document-specialist agents for external web/doc lookup |
-| `visual-verdict` | Structured visual QA verdict for screenshot-to-reference comparisons |
-
-### Setup & Infra
-
-| Skill | Description |
-|-------|-------------|
-| `setup` | Install/update routing entrypoint for OMC |
-| `omc-setup` | Canonical OMC install flow for plugin/npm/local-dev setups |
-| `omc-doctor` | Diagnose and fix oh-my-claudecode installation issues |
-| `omc-reference` | OMC agent catalog, tools, team pipelines, commit protocol |
-| `mcp-setup` | Configure popular MCP servers |
-| `configure-notifications` | Configure Telegram / Discord / Slack integrations via natural language |
-| `hud` | Configure HUD display options |
-| `skill` | Manage local skills — list, add, remove, search, edit, setup wizard |
-| `skillify` | Turn a repeatable workflow into a reusable OMC skill draft |
-| `learner` | Extract a learned skill from the current conversation |
-| `deepinit` | Deep codebase initialization with hierarchical `AGENTS.md` documentation |
-| `project-session-manager` | Worktree-first dev environment manager for issues/PRs/features with tmux |
-| `release` | Generic release assistant — caches repo release rules in `.omc/RELEASE_RULE.md` |
-| `ai-slop-cleaner` | Clean AI-generated code slop with regression-safe, deletion-first workflow |
+| `seo-analysis` | Auditoria SEO completa integrando Google Search Console, GA4 e Bing |
+| `keyword-research` | Descoberta, análise e priorização de keywords |
+| `content-writer` | Escreve blog posts, landing pages e conteúdo otimizado para SEO |
+| `meta-tags-optimizer` | Otimiza title tags, meta descriptions e Open Graph |
+| `schema-markup-generator` | Gera JSON-LD structured data |
+| `ads` | Gerencia campanhas Google Ads — performance, keywords, bidding |
+| `ads-audit` | Auditoria de conta Google Ads e contexto de negócio |
+| `ads-copy` | Gera e roda A/B test em copy de Google Ads |
+| `ads-landing` | Diagnostica e pontua landing pages de Google Ads |
+| `setup-cms` | Conecta um CMS às ferramentas SEO |
+| `gemini` | Segunda opinião cross-model usando Google Gemini |
+| `toprank-upgrade` | Atualiza o plugin toprank para a última versão |
 
 ---
 
@@ -526,6 +480,88 @@ General-purpose skills without explicit origin metadata. Installed via `~/.claud
 
 ---
 
+## Marketing Skills
+
+> **Source:** [github.com/coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills)
+> **Author:** [Corey Haines](https://corey.co)
+
+Coleção de skills voltadas para marketing — CRO, copywriting, SEO, analytics e growth engineering. Todas as skills usam `product-marketing-context` como base compartilhada de posicionamento, audiência e produto.
+
+### SEO & Content
+
+| Skill | Description |
+|-------|-------------|
+| [`seo-audit`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/seo-audit) | Auditar, revisar ou diagnosticar problemas de SEO no site |
+| [`ai-seo`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/ai-seo) | Otimizar conteúdo para AI search engines e citações de LLMs |
+| [`site-architecture`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/site-architecture) | Planejar hierarquia de páginas, navegação, URLs e internal linking |
+| [`programmatic-seo`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/programmatic-seo) | Criar páginas SEO em escala usando templates e dados |
+| [`schema-markup`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/schema-markup) | Adicionar, corrigir ou otimizar schema markup e structured data |
+| [`content-strategy`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/content-strategy) | Planejar estratégia de conteúdo e definir tópicos a cobrir |
+| [`aso-audit`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/aso-audit) | Auditar ou otimizar listing de App Store / Google Play |
+
+### CRO (Conversion Rate Optimization)
+
+| Skill | Description |
+|-------|-------------|
+| [`page-cro`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/page-cro) | Otimizar qualquer página de marketing — home, landing, pricing |
+| [`signup-flow-cro`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/signup-flow-cro) | Otimizar signup, registration, trial activation |
+| [`onboarding-cro`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/onboarding-cro) | Otimizar onboarding pós-signup, ativação e time-to-value |
+| [`form-cro`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/form-cro) | Otimizar forms que não sejam signup — lead capture, contato, checkout |
+| [`popup-cro`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/popup-cro) | Criar/otimizar popups, modais, overlays, slide-ins e banners |
+| [`paywall-upgrade-cro`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/paywall-upgrade-cro) | Criar/otimizar paywalls, upgrade screens, upsell modals |
+
+### Content & Copy
+
+| Skill | Description |
+|-------|-------------|
+| [`copywriting`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/copywriting) | Escrever ou reescrever copy de marketing para qualquer página |
+| [`copy-editing`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/copy-editing) | Editar, revisar ou melhorar copy de marketing existente |
+| [`cold-email`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/cold-email) | Escrever cold emails B2B e sequências de follow-up |
+| [`email-sequence`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/email-sequence) | Criar ou otimizar drip campaigns e email flows de lifecycle |
+| [`social-content`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/social-content) | Criar, agendar e otimizar conteúdo social (LinkedIn, X, Instagram) |
+
+### Paid & Measurement
+
+| Skill | Description |
+|-------|-------------|
+| [`paid-ads`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/paid-ads) | Campanhas pagas em Google Ads, Meta, LinkedIn, X |
+| [`ad-creative`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/ad-creative) | Gerar, iterar ou escalar ad creative — headlines, copy, frames |
+| [`ab-test-setup`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/ab-test-setup) | Planejar, desenhar e implementar A/B tests e programas de experimentação |
+| [`analytics-tracking`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/analytics-tracking) | Configurar, melhorar ou auditar analytics e measurement |
+
+### Growth & Retention
+
+| Skill | Description |
+|-------|-------------|
+| [`referral-program`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/referral-program) | Criar, otimizar ou analisar programas de referral e affiliate |
+| [`free-tool-strategy`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/free-tool-strategy) | Planejar free tools para lead gen, SEO e distribuição |
+| [`churn-prevention`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/churn-prevention) | Reduzir churn, cancellation flows, save offers, recuperação de payment |
+| [`community-marketing`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/community-marketing) | Construir e alavancar comunidades online para growth |
+| [`lead-magnets`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/lead-magnets) | Criar, planejar e otimizar lead magnets para email capture |
+
+### Sales & GTM
+
+| Skill | Description |
+|-------|-------------|
+| [`revops`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/revops) | Revenue operations, lead lifecycle, handoff marketing↔sales |
+| [`sales-enablement`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/sales-enablement) | Sales collateral — pitch decks, one-pagers, objection handling |
+| [`launch-strategy`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/launch-strategy) | Planejar product launches e feature announcements |
+| [`pricing-strategy`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/pricing-strategy) | Decisões de pricing, packaging e monetization |
+| [`competitor-alternatives`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/competitor-alternatives) | Páginas de comparação e alternativas para SEO e sales |
+| [`competitor-profiling`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/competitor-profiling) | Pesquisar, perfilar e analisar competidores a partir de URLs |
+| [`directory-submissions`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/directory-submissions) | Submeter produto em diretórios (startup, SaaS, AI, MCP, review sites) |
+
+### Strategy & Research
+
+| Skill | Description |
+|-------|-------------|
+| [`product-marketing-context`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/product-marketing-context) | Documento base de contexto de produto — lido por todas as outras skills |
+| [`marketing-ideas`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/marketing-ideas) | Brainstorm de ideias e estratégias de marketing para SaaS |
+| [`marketing-psychology`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/marketing-psychology) | Aplicar princípios psicológicos e behavioral science ao marketing |
+| [`customer-research`](https://github.com/coreyhaines31/marketingskills/tree/main/skills/customer-research) | Conduzir, analisar e sintetizar customer research |
+
+---
+
 ## Custom Skills
 
 Skills created specifically for my workflow.
@@ -534,6 +570,7 @@ Skills created specifically for my workflow.
 |-------|-------------|------|
 | [`frontend-project-style`](https://github.com/FelipeOFF/frontend-project-style-skill) | Configurable design system and style guide for frontend projects. Auto-generates `PROJECT_STYLE.md` with your design tokens on first use. | [FelipeOFF/frontend-project-style-skill](https://github.com/FelipeOFF/frontend-project-style-skill) |
 | [`design-advisor`](https://github.com/FelipeOFF/design-advisor-skill) | Industry-specific UI/UX design recommendations with 550+ rules, 50 color palettes, 30+ font pairings, and real component examples. | [FelipeOFF/design-advisor-skill](https://github.com/FelipeOFF/design-advisor-skill) |
+| [`obscura`](https://github.com/FelipeOFF/obscura-skill) | Teaches Claude how to use [Obscura](https://github.com/h4ckf0r0day/obscura) — the Rust-based headless browser (~30 MB) for web scraping and AI agents, with Puppeteer/Playwright over CDP and built-in stealth. | [FelipeOFF/obscura-skill](https://github.com/FelipeOFF/obscura-skill) |
 
 ---
 
@@ -652,9 +689,6 @@ Then inside Claude Code:
 
 /plugin marketplace add firebase
 /plugin install firebase
-
-/plugin marketplace add https://github.com/Yeachan-Heo/oh-my-claudecode
-/plugin install oh-my-claudecode
 
 /plugin marketplace add openai-codex
 /plugin install codex@openai-codex
