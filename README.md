@@ -16,6 +16,9 @@ A curated collection of **130+ skills** installed in my Claude Code setup. This 
 - [UI/UX Pro Max](#uiux-pro-max)
 - [21st.dev — Magic MCP](#21stdev--magic-mcp)
 - [ECC — Everything Claude Code](#ecc--everything-claude-code)
+- [Stitch Skills (Google Labs)](#stitch-skills-google-labs)
+- [Matt Pocock Skills](#matt-pocock-skills)
+- [Huashu Design](#huashu-design)
 - [Community Skills](#community-skills)
 - [Marketing Skills](#marketing-skills)
 - [Custom Skills](#custom-skills)
@@ -57,6 +60,12 @@ npx skills add git@github.com:FelipeOFF/frontend-project-style-skill.git
 # /plugin install codex@openai-codex
 # /plugin marketplace add nowork-studio/toprank
 # /plugin install toprank
+# /plugin install claude-code-setup@claude-plugins-official
+
+# 6. Skills via npx skills (Stitch, Matt Pocock, Huashu)
+npx skills add git@github.com:google-labs-code/stitch-skills.git -y
+npx skills add git@github.com:mattpocock/skills.git -y
+npx skills add git@github.com:alchaincyf/huashu-design.git -y
 ```
 
 ---
@@ -161,6 +170,15 @@ Suite de skills focada em SEO técnico, on-page e Google Ads — auditoria, pesq
 | `setup-cms` | Conecta um CMS às ferramentas SEO |
 | `gemini` | Segunda opinião cross-model usando Google Gemini |
 | `toprank-upgrade` | Atualiza o plugin toprank para a última versão |
+
+### Claude Code Setup
+
+> **Source:** Anthropic Official Marketplace ([claude-plugins-official](https://github.com/anthropics/claude-plugins))
+> **Install:** `/plugin install claude-code-setup@claude-plugins-official`
+
+| Skill | When to Use |
+|-------|-------------|
+| `claude-automation-recommender` | Analisa o codebase e recomenda automações sob medida — hooks, skills, MCP servers, subagents e slash commands. Read-only, não modifica arquivos. |
 
 ---
 
@@ -405,6 +423,62 @@ A large collection of general-purpose development skills.
 | [`configure-ecc`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/configure-ecc) | Interactive ECC installer |
 | [`project-guidelines-example`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/project-guidelines-example) | Example project-specific skill template |
 | [`frontend-slides`](https://github.com/zarazhangrui/frontend-slides) | HTML presentations from scratch or PowerPoint conversion |
+| [`nutrient-document-processing`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/nutrient-document-processing) | Convert, OCR, redact and extract data from PDFs/Office docs via Nutrient |
+
+---
+
+## Stitch Skills (Google Labs)
+
+> **Source:** [github.com/google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills)
+> **Install:** `npx skills add git@github.com:google-labs-code/stitch-skills.git -y`
+
+Suite oficial do Google Stitch para gerar telas hi-fi, design systems e front-end pronto a partir de prompts de design. Integra-se ao Stitch MCP.
+
+| Skill | Description |
+|-------|-------------|
+| [`stitch-design`](https://github.com/google-labs-code/stitch-skills/tree/main/skills/stitch-design) | Entry point unificado — enhance prompt, sintetiza `.stitch/DESIGN.md` e gera/edita telas via Stitch MCP |
+| [`stitch-loop`](https://github.com/google-labs-code/stitch-skills/tree/main/skills/stitch-loop) | Loop iterativo de design + revisão até atingir qualidade alvo |
+| [`enhance-prompt`](https://github.com/google-labs-code/stitch-skills/tree/main/skills/enhance-prompt) | Transforma ideias vagas de UI em prompts polidos e otimizados para Stitch |
+| [`design-md`](https://github.com/google-labs-code/stitch-skills/tree/main/skills/design-md) | Analisa projetos Stitch e sintetiza `DESIGN.md` consumível por agentes |
+| [`taste-design`](https://github.com/google-labs-code/stitch-skills/tree/main/skills/taste-design) | Semantic Design System — força tipografia, cor calibrada, micro-motion e padrões anti-genéricos |
+| [`react-components`](https://github.com/google-labs-code/stitch-skills/tree/main/skills/react-components) | Converte designs Stitch em componentes React modulares |
+| [`shadcn-ui`](https://github.com/google-labs-code/stitch-skills/tree/main/skills/shadcn-ui) | Integra e usa shadcn/ui em projetos a partir do design |
+| [`remotion`](https://github.com/google-labs-code/stitch-skills/tree/main/skills/remotion) | Gera vídeos walkthrough a partir de designs Stitch via Remotion |
+
+---
+
+## Matt Pocock Skills
+
+> **Source:** [github.com/mattpocock/skills](https://github.com/mattpocock/skills)
+> **Author:** [Matt Pocock](https://github.com/mattpocock)
+> **Install:** `npx skills add git@github.com:mattpocock/skills.git -y`
+
+Coleção focada em TDD, planning e workflows de issue/PRD para times que vivem no GitHub.
+
+| Skill | Description |
+|-------|-------------|
+| [`tdd`](https://github.com/mattpocock/skills/tree/main/tdd) | TDD com loop red-green-refactor — usar para features, bug fixes e testes de integração |
+| [`grill-me`](https://github.com/mattpocock/skills/tree/main/grill-me) | Entrevista o usuário sem dó até resolver cada ramo da árvore de decisão de um plano |
+| [`design-an-interface`](https://github.com/mattpocock/skills/tree/main/design-an-interface) | Gera múltiplos designs de interface radicalmente diferentes via sub-agents paralelos |
+| [`request-refactor-plan`](https://github.com/mattpocock/skills/tree/main/request-refactor-plan) | Cria plano detalhado de refactor com commits pequenos via entrevista, e abre como issue |
+| [`improve-codebase-architecture`](https://github.com/mattpocock/skills/tree/main/improve-codebase-architecture) | Encontra oportunidades de aprofundamento na arquitetura usando `CONTEXT.md` e ADRs |
+| [`triage-issue`](https://github.com/mattpocock/skills/tree/main/triage-issue) | Triagem de bug — explora codebase, encontra root cause e cria issue com plano de fix em TDD |
+| [`to-prd`](https://github.com/mattpocock/skills/tree/main/to-prd) | Transforma o contexto da conversa atual num PRD e abre como issue no GitHub |
+| [`to-issues`](https://github.com/mattpocock/skills/tree/main/to-issues) | Quebra um plano/spec/PRD em issues independentes usando tracer-bullet vertical slices |
+| [`migrate-to-shoehorn`](https://github.com/mattpocock/skills/tree/main/migrate-to-shoehorn) | Migra arquivos de teste de `as` casts para `@total-typescript/shoehorn` |
+| [`scaffold-exercises`](https://github.com/mattpocock/skills/tree/main/scaffold-exercises) | Estrutura diretórios de exercícios com seções, problems, solutions e explainers |
+| [`edit-article`](https://github.com/mattpocock/skills/tree/main/edit-article) | Edita e aprimora artigos — reestrutura seções, melhora clareza, aperta a prosa |
+
+---
+
+## Huashu Design
+
+> **Source:** [github.com/alchaincyf/huashu-design](https://github.com/alchaincyf/huashu-design)
+> **Install:** `npx skills add git@github.com:alchaincyf/huashu-design.git -y`
+
+| Skill | Description |
+|-------|-------------|
+| [`huashu-design`](https://github.com/alchaincyf/huashu-design) | 花叔Design — protótipos hi-fi em HTML, demos interativos, slides, animações, exploração de variantes de design e expert review. Inclui workflows de Junior Designer, anti-AI-slop, validação Playwright e exportação de animações HTML para MP4/GIF. |
 
 ---
 
@@ -477,6 +551,8 @@ General-purpose skills without explicit origin metadata. Installed via `~/.claud
 | Skill | Description |
 |-------|-------------|
 | `visa-doc-translate` | Translate visa docs to bilingual English PDF |
+| [`1password`](https://developer.1password.com/docs/cli/get-started/) | Set up and use the 1Password CLI (`op`) — install, sign in, read/inject/run secrets |
+| `context7-mcp` | Heuristics for when to call the Context7 MCP for up-to-date library/framework docs |
 
 ---
 
@@ -670,6 +746,14 @@ npx skills add git@github.com:FelipeOFF/frontend-project-style-skill.git
 
 # 5. Install Design Advisor
 npx skills add git@github.com:FelipeOFF/design-advisor-skill.git
+
+# 6. Install Stitch / Matt Pocock / Huashu skill collections
+npx skills add git@github.com:google-labs-code/stitch-skills.git -y
+npx skills add git@github.com:mattpocock/skills.git -y
+npx skills add git@github.com:alchaincyf/huashu-design.git -y
+
+# 7. Install Obscura skill (web scraping & E2E with Rust headless browser)
+npx skills add git@github.com:FelipeOFF/obscura-skill.git -y
 ```
 
 Then inside Claude Code:
@@ -692,6 +776,11 @@ Then inside Claude Code:
 
 /plugin marketplace add openai-codex
 /plugin install codex@openai-codex
+
+/plugin marketplace add nowork-studio/toprank
+/plugin install toprank
+
+/plugin install claude-code-setup@claude-plugins-official
 ```
 
 ### Verify Installation
