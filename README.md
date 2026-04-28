@@ -15,6 +15,7 @@ A curated collection of **130+ skills** installed in my Claude Code setup. This 
 - [Obsidian Skills](#obsidian-skills)
 - [UI/UX Pro Max](#uiux-pro-max)
 - [21st.dev — Magic MCP](#21stdev--magic-mcp)
+- [Design Resources & Inspiration](#design-resources--inspiration)
 - [ECC — Everything Claude Code](#ecc--everything-claude-code)
 - [Stitch Skills (Google Labs)](#stitch-skills-google-labs)
 - [Matt Pocock Skills](#matt-pocock-skills)
@@ -325,6 +326,54 @@ AI-powered component generation and design inspiration platform. Provides:
 | `logo_search` | Search for logos and brand assets |
 
 Works as an MCP server connected to Claude Code, providing real-time component generation and design system integration.
+
+---
+
+## Design Resources & Inspiration
+
+> Coleção curada de sites, plataformas e repositórios usados como referência de **design** — inspiração visual, bibliotecas de componentes, builders no-code/AI, design systems, agregadores de UI mobile/web e ferramentas de bridge entre design e código.
+
+Não são skills nem plugins instaláveis — são **fontes externas** consultadas durante o trabalho de UI/UX para colher referências, baixar padrões, gerar componentes ou estudar interações.
+
+### Plataformas & Marketplaces
+
+| Recurso | Tipo | Descrição |
+|---------|------|-----------|
+| [21st.dev](https://21st.dev/) | Component marketplace + MCP | Marketplace de componentes UI gerados/curados por IA. Integra-se ao Claude Code via `mcp__magic__*` para gerar, refinar e buscar componentes a partir de linguagem natural. Também expõe `logo_search` para assets de marca. |
+| [motionsites.ai](https://motionsites.ai/) | Galeria de sites com animação | Showcase curado de sites focados em **motion design** e micro-interações. Útil para benchmarking de animações, transições e storytelling visual em landing pages. |
+| [Mobbin](https://mobbin.com/discover/apps/web/latest) | Library de UI patterns | Maior biblioteca pública de **screens reais** de apps mobile e web — fluxos de onboarding, checkout, paywall, settings, empty states. Filtrável por indústria, plataforma e padrão de UX. Referência canônica para benchmarking de fluxos. |
+| [Webflow](https://webflow.com/?r=0) | No-code visual builder | Ferramenta visual para construir sites production-grade com controle pixel-perfect sobre layout, animações e CMS. Útil como referência de capabilities (o que é possível sem código) e para protótipos hi-fi entregáveis. |
+| [Aura](https://www.aura.build/) | AI website builder | Builder de websites movido a IA — gera landing pages, portfolios e sites institucionais a partir de prompts. Boa referência para entender o estado atual de **AI-native site generation** e para gerar baselines rápidos. |
+| [Asimov Academy — SD](https://sd.asimov.academy/) | Curso/recurso de Design | Material e curso da Asimov Academy focado em design (`sd` = Software Design / Stable Diffusion / Skill Design, conforme contexto). Referência para fundamentos e workflows de design assistido por IA em PT-BR. |
+
+### Design Systems & Registries
+
+| Recurso | Tipo | Descrição |
+|---------|------|-----------|
+| [designdotmd.directory](https://designdotmd.directory/#/) | Diretório `design.md` | Diretório de arquivos `design.md` — padrão emergente de **design-as-code** onde decisões de design (tokens, princípios, componentes) ficam versionadas em markdown legível por agentes de IA. Útil para estudar como outros times documentam design para consumo por LLMs. |
+| [monet-design / monet-registry](https://github.com/monet-design/monet-registry) | Component registry | Registry de componentes do design system **Monet** — distribuição via CLI no estilo `shadcn/ui` (copy-paste de componentes versionados com tokens). Referência para construir registries próprios e padrões de distribuição de componentes. |
+
+### Bridges entre Design e Código
+
+| Recurso | Tipo | Descrição |
+|---------|------|-----------|
+| [picasso-claude-design-claude-code-bridge-loop](https://github.com/RazvanGabrielNiculae/picasso-claude-design-claude-code-bridge-loop) | Workflow / repositório | Implementação de **loop bridge** entre Claude (design) e Claude Code (implementação) — o agente de design produz especificações que o agente de código consome, com feedback iterativo. Padrão excelente para automatizar o pipeline design → código. |
+
+### Ferramentas de Coleta e APIs
+
+| Recurso | Tipo | Descrição |
+|---------|------|-----------|
+| [aayushsoam/motionsites.ai](https://github.com/aayushsoam/motionsites.ai) | Repositório fonte | Código-fonte público do agregador motionsites.ai. Útil para entender como construir um diretório curado de sites com motion design e como organizar metadata/tags de animação. |
+| [asimov-academy/Website-Downloader](https://github.com/asimov-academy/Website-Downloader) | CLI tool | Ferramenta para **baixar sites inteiros** (HTML, CSS, JS, assets) para análise offline. Ideal para dissecar referências de design, estudar implementações e alimentar agentes de IA com contexto visual completo de um site. |
+| [underthestars-zhy/MobbinAPI](https://github.com/underthestars-zhy/MobbinAPI) | API não-oficial | Wrapper não-oficial para acessar dados do Mobbin programaticamente. Permite scriptar busca de screens, exportar referências e alimentar pipelines de inspiração automatizados. **Atenção:** uso sujeito aos ToS do Mobbin. |
+
+### Como uso no fluxo
+
+1. **Inspiração & benchmarking** → Mobbin (fluxos), motionsites.ai (animação), Webflow showcase (capabilities)
+2. **Componentes prontos** → 21st.dev (via MCP no Claude Code), Monet Registry
+3. **Design-as-code** → designdotmd.directory para padrões de `DESIGN.md` consumíveis por agentes
+4. **Pipelines automatizados** → picasso bridge loop (design ↔ código), Website-Downloader + MobbinAPI para coleta
+5. **Geração rápida** → Aura (AI builder), 21st Magic MCP (componentes sob demanda), skill Stitch (telas hi-fi)
 
 ---
 
