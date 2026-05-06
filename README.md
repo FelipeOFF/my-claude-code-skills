@@ -1,6 +1,6 @@
 # My Claude Code Skills
 
-A curated collection of **130+ skills** installed in my Claude Code setup. This list is meant to help teammates and collaborators quickly replicate the same environment.
+A curated collection of **150+ skills** installed in my Claude Code setup. This list is meant to help teammates and collaborators quickly replicate the same environment.
 
 > **What are skills?** Skills are reusable prompt modules that teach Claude Code how to approach specific tasks — from debugging to design systems to deployment. They live in `~/.claude/skills/` or are installed via plugins and marketplaces.
 
@@ -16,10 +16,13 @@ A curated collection of **130+ skills** installed in my Claude Code setup. This 
 - [UI/UX Pro Max](#uiux-pro-max)
 - [21st.dev — Magic MCP](#21stdev--magic-mcp)
 - [Design Resources & Inspiration](#design-resources--inspiration)
+- [AI Design Taste & UI Generation](#ai-design-taste--ui-generation)
 - [ECC — Everything Claude Code](#ecc--everything-claude-code)
 - [Stitch Skills (Google Labs)](#stitch-skills-google-labs)
 - [Matt Pocock Skills](#matt-pocock-skills)
 - [Huashu Design](#huashu-design)
+- [Testing & Security Skills](#testing--security-skills)
+- [Writing & Content Skills](#writing--content-skills)
 - [Community Skills](#community-skills)
 - [Marketing Skills](#marketing-skills)
 - [Custom Skills](#custom-skills)
@@ -62,11 +65,18 @@ npx skills add git@github.com:FelipeOFF/frontend-project-style-skill.git
 # /plugin marketplace add nowork-studio/toprank
 # /plugin install toprank
 # /plugin install claude-code-setup@claude-plugins-official
+# /plugin marketplace add nyldn/claude-octopus
+# /plugin install octo@nyldn-plugins
+# /plugin marketplace add sentrux/sentrux
+# /plugin install sentrux@sentrux-marketplace
 
 # 6. Skills via npx skills (Stitch, Matt Pocock, Huashu)
 npx skills add git@github.com:google-labs-code/stitch-skills.git -y
 npx skills add git@github.com:mattpocock/skills.git -y
 npx skills add git@github.com:alchaincyf/huashu-design.git -y
+
+# 7. Humanizer — remove signs of AI-generated writing
+git clone https://github.com/blader/humanizer.git ~/.claude/skills/humanizer
 ```
 
 ---
@@ -180,6 +190,36 @@ Suite de skills focada em SEO técnico, on-page e Google Ads — auditoria, pesq
 | Skill | When to Use |
 |-------|-------------|
 | `claude-automation-recommender` | Analisa o codebase e recomenda automações sob medida — hooks, skills, MCP servers, subagents e slash commands. Read-only, não modifica arquivos. |
+
+### Octo (claude-octopus)
+
+> **Source:** [github.com/nyldn/claude-octopus](https://github.com/nyldn/claude-octopus)
+> **Marketplace:** `nyldn-plugins`
+> **Install:** `/plugin marketplace add nyldn/claude-octopus` then `/plugin install octo@nyldn-plugins`
+
+Multi-tentacled orchestrator que aplica a metodologia **Double Diamond** ao desenvolvimento assistido por IA. Inclui statusline adaptativa de 3 níveis, instalador de dependências, smart HUD, **32 personas especialistas, 40 comandos e 50 skills**. Compatível com Claude Code e Factory AI Droid.
+
+| Categoria | Highlights |
+|-----------|------------|
+| Comandos `/octo:*` | `octo-discover`, `octo-define`, `octo-develop`, `octo-deliver`, `octo-debate`, `octo-debug`, `octo-extract`, `octo-plan`, `octo-multi`, `octo-parallel`, `octo-pipeline`, `octo-loop`, `octo-claw`, `octo-doctor`, `octo-history`, `octo-km`, `octo-deck`, `octo-meta-prompt`, `octo-model-config`, `octo-design-ui-ux`, `octo-careful`, `octo-freeze`, `octo-guard`, `octo-factory`, `octo-embrace`, `octo-costs`, `octo-docs`, `octo-brainstorm`, `octo-auto` |
+| Personas (agents) | `backend-architect`, `frontend-developer`, `cloud-architect`, `database-architect`, `security-auditor`, `performance-engineer`, `code-reviewer`, `tdd-orchestrator`, `incident-responder`, `devops-troubleshooter`, `python-pro`, `typescript-pro`, `ai-engineer`, `graphql-architect`, `business-analyst`, `marketing-strategist`, `finance-analyst`, `legal-compliance-advisor`, `strategy-analyst`, `product-writer`, `academic-writer`, `research-synthesizer`, `exec-communicator`, `mermaid-expert`, `ui-ux-designer`, `ux-researcher`, `context-manager`, `openclaw-admin` (e mais) |
+| Skills | `octopus-architecture`, `octopus-code-review`, `octopus-security-audit`, `octopus-quick`, e dezenas de `skill-*` (debate, debug, doctor, deck, doc-delivery, doc-sync, decision-support, design-lineage, finish-branch, intent-contract, knowledge-work, iterative-loop, content-pipeline, copilot-provider, cost-projections, coverage-audit, claw, audit, extract, issues, etc.) |
+
+Roda multi-provider com routing entre Claude, Codex e Gemini para debates entre agentes, consensus building e execução paralela.
+
+### Sentrux
+
+> **Source:** [github.com/sentrux/sentrux](https://github.com/sentrux/sentrux)
+> **Marketplace:** `sentrux-marketplace`
+> **Install:** `/plugin marketplace add sentrux/sentrux` then `/plugin install sentrux@sentrux-marketplace`
+
+Visualização ao vivo do codebase + **structural quality gate via MCP**. Avalia 14 dimensões de saúde do código (coupling, cycles, cohesion, dead code, test coverage, etc.) com notas A–F. Útil como guarda de qualidade antes/depois de sessões de agente.
+
+| Skill | Description |
+|-------|-------------|
+| `scan` | Escaneia o projeto e devolve grades A–F nas 14 dimensões. Usa as MCP tools `scan`, `health`, `architecture`, `coupling`, `cycles`, `hottest`, `evolution`, `dsm`, `test_gaps`, `check_rules`, `session_start`, `session_end`, `rescan`, `blast_radius`, `level`. |
+
+Workflow recomendado: chamar `session_start` antes de uma sessão de coding intensiva e `session_end` depois para detectar degradação estrutural automaticamente.
 
 ---
 
@@ -377,6 +417,40 @@ Não são skills nem plugins instaláveis — são **fontes externas** consultad
 
 ---
 
+## AI Design Taste & UI Generation
+
+> Coleção de skills focadas em **gosto visual**, geração de imagens de referência e auditoria/redesign de interfaces. Ensinam a IA a fugir dos defaults genéricos de LLMs e a entregar UI que parece feita por agência sênior. Complementam UI/UX Pro Max, Stitch e o plugin Frontend Design.
+
+### Senior taste & enforcement
+
+| Skill | Description |
+|-------|-------------|
+| `impeccable` | Skill mãe de design de frontend — design, redesign, crítica, polish, animação, theming, tokens, acessibilidade, responsivo, micro-interações. Inclui agents, reference e scripts. Use para qualquer trabalho de UI quando quiser que ele saia "impecável". |
+| `design-taste-frontend` | Senior UI/UX Engineer — sobrescreve vieses default do LLM. Enforce regras métricas, arquitetura estrita de componentes, hardware-accel CSS e equilíbrio entre design e engenharia. |
+| `gpt-taste` | Elite UX/UI + GSAP Motion Engineer. Força randomização Python para variância de layout, estrutura AIDA, tipografia editorial wide, bento grids gapless, GSAP ScrollTriggers (pinning, stacking, scrubbing), micro-imagens inline e spacing massivo. |
+| `high-end-visual-design` | Ensina a IA a desenhar como agência high-end — define fontes, spacing, sombras, estrutura de cards e animações que fazem o site parecer caro. Bloqueia defaults genéricos. |
+| `stitch-design-taste` | Semantic Design System para Google Stitch — gera `DESIGN.md` agent-friendly que enforce tipografia rigorosa, cor calibrada, layouts assimétricos, micro-motion perpétuo e performance hardware-accel. |
+| `redesign-existing-projects` | Faz upgrade de sites/apps existentes para qualidade premium — audita design atual, identifica padrões AI-genéricos e aplica padrões high-end sem quebrar funcionalidade. Funciona com qualquer CSS framework ou vanilla CSS. |
+| `full-output-enforcement` | Sobrescreve o comportamento de truncation default do LLM. Força geração completa de código, bane placeholders e lida com splits de token-limit de forma limpa. Para tarefas que exijam saída exaustiva e sem cortes. |
+
+### Visual style packs
+
+| Skill | Description |
+|-------|-------------|
+| `brandkit` | Brand-kit image generation premium — boards de brand-guidelines, logo systems, identity decks e visual-world presentations. Treinado para minimalist, cinematic, editorial, dark-tech, luxury, cultural, security, gaming, developer-tool e consumer-app brand systems. |
+| `industrial-brutalist-ui` | Interfaces mecânicas raw — Swiss typographic print + military terminal. Grids rígidos, contrast extremo de type scale, cor utilitária, efeitos de degradação analógica. Ideal para dashboards data-heavy, portfolios e sites editoriais. |
+| `minimalist-ui` | Interfaces clean editorial — paleta warm monochrome, contraste tipográfico, bento grids flat, pastéis muted. Sem gradientes, sem sombras pesadas. |
+
+### Image generation & visual references
+
+| Skill | Description |
+|-------|-------------|
+| `image-to-code` | Image-to-code elite (Codex). Para web tasks visualmente importantes, gera primeiro a imagem do design, analisa profundamente e implementa para casar o mais próximo possível. Prefere imagens grandes section-specific em vez de boards comprimidos. |
+| `imagegen-frontend-web` | Direção de imagem frontend elite — gera **uma imagem horizontal separada por seção** de landing page (8 seções = 8 imagens). Enforce variedade composicional, freedom de background, varied CTAs/hero scales, narrative spine e paleta consistente entre todas as imagens. |
+| `imagegen-frontend-mobile` | Image generation para mobile premium — telas e fluxos app-native (iOS, Android, cross-platform). Hierarquia clean, multi-screen consistency, paletas controladas, ícones tasteful, mockup de iPhone subtle. Gera imagens, não código. |
+
+---
+
 ## ECC — Everything Claude Code
 
 > **Source:** [github.com/anthropics/ecc](https://github.com/anthropics/ecc)
@@ -448,6 +522,9 @@ A large collection of general-purpose development skills.
 |-------|-------------|
 | [`cost-aware-llm-pipeline`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/cost-aware-llm-pipeline) | Model routing by task complexity, budget tracking, prompt caching |
 | [`regex-vs-llm-structured-text`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/regex-vs-llm-structured-text) | Decision framework: regex vs LLM for parsing structured text |
+| [`claude-api`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/claude-api) | Padrões da Anthropic Claude API em Python e TypeScript — Messages API, streaming, tool use, vision, extended thinking, batches, prompt caching e Claude Agent SDK |
+| [`mcp-server-patterns`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/mcp-server-patterns) | Construir MCP servers com Node/TypeScript SDK — tools, resources, prompts, validação Zod, stdio vs Streamable HTTP |
+| [`codebase-onboarding`](https://github.com/affaan-m/everything-claude-code/tree/main/skills/codebase-onboarding) | Analisa codebase desconhecido e gera guia de onboarding estruturado — mapa de arquitetura, entry points, convenções e CLAUDE.md inicial |
 
 ### Content & Writing
 
@@ -528,6 +605,26 @@ Coleção focada em TDD, planning e workflows de issue/PRD para times que vivem 
 | Skill | Description |
 |-------|-------------|
 | [`huashu-design`](https://github.com/alchaincyf/huashu-design) | 花叔Design — protótipos hi-fi em HTML, demos interativos, slides, animações, exploração de variantes de design e expert review. Inclui workflows de Junior Designer, anti-AI-slop, validação Playwright e exportação de animações HTML para MP4/GIF. |
+
+---
+
+## Testing & Security Skills
+
+> Skills de testes avançados (property-based, fuzzing) instaladas localmente em `~/.claude/skills/`.
+
+| Skill | Description |
+|-------|-------------|
+| `property-based-testing` | Property-Based Testing (PBT) cross-language — Hypothesis (Python), fast-check (TS/JS), proptest (Rust), QuickCheck e smart contracts. Detecta oportunidades de PBT (encode/decode pairs, validators, normalizers, pure functions, invariants), gera testes, revisa testes existentes (tautológicos/vacuous) e refatora código para testabilidade. |
+| `fuzzing-dictionary` | Constrói **fuzzing dictionaries** com tokens domain-specific para guiar fuzzers — referências para AFL++ Dictionaries e OSS-Fuzz Dictionaries. Use ao preparar campanhas de fuzz. |
+| `fuzzing-obstacles` | Técnicas de patch para superar obstáculos de fuzzing (checksums, magic numbers, encryption, anti-debug). Use para liberar coverage quando o fuzzer trava em validações superficiais. |
+
+---
+
+## Writing & Content Skills
+
+| Skill | Source | Description |
+|-------|--------|-------------|
+| [`humanizer`](https://github.com/blader/humanizer) | [blader/humanizer](https://github.com/blader/humanizer) | Remove sinais de escrita gerada por IA — apaga muletas estilísticas, ritmo previsível e padrões de copy-machine. Use ao editar/revisar texto que precisa soar natural e humano. Slash command `/humanizer`. |
 
 ---
 
@@ -804,6 +901,9 @@ npx skills add git@github.com:alchaincyf/huashu-design.git -y
 
 # 7. Install Obscura skill (web scraping & E2E with Rust headless browser)
 npx skills add git@github.com:FelipeOFF/obscura-skill.git -y
+
+# 8. Humanizer — remove signs of AI-generated writing
+git clone https://github.com/blader/humanizer.git ~/.claude/skills/humanizer
 ```
 
 Then inside Claude Code:
@@ -831,6 +931,12 @@ Then inside Claude Code:
 /plugin install toprank
 
 /plugin install claude-code-setup@claude-plugins-official
+
+/plugin marketplace add nyldn/claude-octopus
+/plugin install octo@nyldn-plugins
+
+/plugin marketplace add sentrux/sentrux
+/plugin install sentrux@sentrux-marketplace
 ```
 
 ### Verify Installation
