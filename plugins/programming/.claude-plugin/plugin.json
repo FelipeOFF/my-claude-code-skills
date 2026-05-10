@@ -1,6 +1,6 @@
 {
   "name": "programming",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Curadoria de skills de backend, frontend web/mobile, testing e debugging",
   "author": {
     "name": "Felipe Oliveira",
@@ -9,6 +9,9 @@
   "dependencies": [
     { "name": "backend-patterns", "marketplace": "everything-claude-code" },
     { "name": "frontend-patterns", "marketplace": "everything-claude-code" },
-    { "name": "api-design", "marketplace": "everything-claude-code" }
+    { "name": "api-design", "marketplace": "everything-claude-code" },
+    { "name": "postgres-patterns", "marketplace": "everything-claude-code" },
+    { "name": "e2e-testing", "marketplace": "everything-claude-code" },
+    { "name": "claude-api", "marketplace": "everything-claude-code" }
   ]
 }
