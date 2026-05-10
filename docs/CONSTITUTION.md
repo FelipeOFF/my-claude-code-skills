@@ -4,7 +4,7 @@
 > Lido por Claude Code em sessões dentro deste repo para rotear
 > automaticamente comandos como "sobe a skill X aqui".
 
-**Versão:** 1.1 (2026-05-10)
+**Versão:** 1.2 (2026-05-10)
 
 ---
 
@@ -13,10 +13,11 @@
 | Package | Escopo |
 |---|---|
 | `design` | UI/UX, design system, taste, mockups, prototipagem visual. |
-| `copy` | Copywriting, headlines, escrita persuasiva, edição. |
-| `marketing` | SEO, CRO, tráfego pago, email, social, growth. |
 | `programming` | Backend, frontend (web e mobile), testing, debugging, infra, stacks. |
 | `workflow` | Meta-workflow: planning, memória, multi-phase, autonomous loops, multi-agent orchestration. |
+
+> v1.2 removeu `copy` e `marketing` — o autor não usa essas categorias
+> ativamente. Se voltarem a ser relevantes, podem ser readicionadas.
 
 Skills autorais do Felipe que **não** entram em packages: agents
 (`commit-crafter`, `jira-linker`, `pr-writer`), commands (`branch`,
@@ -32,7 +33,7 @@ Uma skill mora em **exatamente um** package. Critério de tie-break para
 skills cross-domínio:
 
 1. Se a skill é sobre uma **stack/tecnologia** → `programming`.
-2. Se a skill é sobre um **objetivo de negócio** (vender, escrever, atrair) → `marketing` ou `copy`.
+2. Se a skill é sobre **planejamento, memória ou orquestração** → `workflow`.
 3. Se a skill é sobre **estética visual** → `design`.
 4. Em empate genuíno, vai para o package onde já há mais skills do mesmo autor/marketplace upstream.
 
@@ -42,7 +43,6 @@ skills cross-domínio:
 |---|---|---|
 | `frontend-patterns` | `programming` | Stack/tecnologia (Regra A.1). |
 | `huashu-design` | `design` | Estética visual / prototipagem (Regra A.3). |
-| `seo` | `marketing` | Objetivo de negócio: tráfego (Regra A.2). |
 | `api-design` | `programming` | Stack (REST) — não é objetivo de negócio. |
 | `tdd` | `programming` | Stack/processo de engenharia. |
 
@@ -50,8 +50,7 @@ skills cross-domínio:
 
 ## Regra B — Top-level por default; mid-level por crescimento
 
-Novas skills entram nos 4 packages raiz: `design`, `copy`, `marketing`,
-`programming`.
+Novas skills entram nos 3 packages raiz: `design`, `programming`, `workflow`.
 
 Mid-level (ex: `programming-frontend-mobile`) só nasce quando:
 

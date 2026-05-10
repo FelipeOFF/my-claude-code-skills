@@ -17,8 +17,6 @@ packages temáticos instaláveis individualmente.
 
 # Por contexto de trabalho — instale só o que precisa agora
 /plugin install design@myskills
-/plugin install copy@myskills
-/plugin install marketing@myskills
 /plugin install programming@myskills
 /plugin install workflow@myskills
 ```
@@ -28,8 +26,6 @@ packages temáticos instaláveis individualmente.
 | Package | Escopo | O que tem dentro | Detalhes |
 |---|---|---|---|
 | `design` | UI/UX, design system, taste, mockups | Stitch (Google Labs), Huashu, plugin frontend-design, image generation, style packs, MCP Magic da 21st.dev | [→ design/README.md](plugins/design/README.md) |
-| `copy` | Copywriting, headlines, escrita persuasiva | _scaffold (sem skills curadas ainda)_ | [→ copy/README.md](plugins/copy/README.md) |
-| `marketing` | SEO, CRO, tráfego pago, email, social | SEO audit (ECC), TopRank | [→ marketing/README.md](plugins/marketing/README.md) |
 | `programming` | Backend, frontend web/mobile, testing, debugging, infra | ECC patterns (api-design, postgres, e2e), Stripe, Firebase, Agent SDK, Rust LSP, MCPs (chrome-devtools, react-grab, hostinger), bundle de TDD | [→ programming/README.md](plugins/programming/README.md) |
 | `workflow` | Planning, memória, multi-phase, autonomous loops, multi-agent | superpowers, claude-mem, agentmemory, octo, codex, ralph-specum, sleepwell, bundle GSD (64 skills), find-skills, 1password | [→ workflow/README.md](plugins/workflow/README.md) |
 
