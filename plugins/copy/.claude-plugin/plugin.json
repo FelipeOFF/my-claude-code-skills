@@ -1,0 +1,10 @@
+{
+  "name": "copy",
+  "version": "0.1.0",
+  "description": "Curadoria de skills de copywriting e escrita persuasiva",
+  "author": {
+    "name": "Felipe Oliveira",
+    "url": "https://github.com/FelipeOFF"
+  },
+  "dependencies": []
+}

@@ -1,0 +1,43 @@
+{
+  "name": "myskills",
+  "owner": {
+    "name": "Felipe Oliveira",
+    "url": "https://github.com/FelipeOFF"
+  },
+  "description": "Curadoria pessoal de skills Claude Code organizada por nicho",
+  "allowCrossMarketplaceDependenciesOn": [
+    "superpowers-marketplace",
+    "everything-claude-code",
+    "octo",
+    "agentmemory",
+    "stripe",
+    "sleepwell",
+    "ralph-specum"
+  ],
+  "plugins": [
+    {
+      "name": "design",
+      "source": "./plugins/design",
+      "description": "Skills de UI/UX, design system e taste",
+      "version": "0.1.0"
+    },
+    {
+      "name": "copy",
+      "source": "./plugins/copy",
+      "description": "Escrita persuasiva, copywriting e conversão",
+      "version": "0.1.0"
+    },
+    {
+      "name": "marketing",
+      "source": "./plugins/marketing",
+      "description": "Marketing digital, tráfego pago, SEO e CRO",
+      "version": "0.1.0"
+    },
+    {
+      "name": "programming",
+      "source": "./plugins/programming",
+      "description": "Backend, frontend web e mobile",
+      "version": "0.1.0"
+    }
+  ]
+}
