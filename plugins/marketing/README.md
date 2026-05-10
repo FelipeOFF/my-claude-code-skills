@@ -9,6 +9,7 @@ _Nenhuma na v0.1._
 ## Dependências de plugins (auto-instaladas)
 
 - `seo` @ `everything-claude-code` — auditoria técnica de SEO, on-page, structured data, Core Web Vitals.
+- `toprank` @ `nowork-studio` — SEO ranking analysis e ferramentas de marketing.
 
 ## Setup adicional (3rd-party standalone)
 
