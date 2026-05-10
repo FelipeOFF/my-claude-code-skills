@@ -12,12 +12,6 @@ Curated skills for backend, frontend (web and mobile), testing, debugging, and i
 
 | Plugin @ Marketplace | Why it's curated |
 |---|---|
-| `backend-patterns` @ `everything-claude-code` | API architecture for Node.js/Express/Next.js — service layers, error handling, validation, async patterns. |
-| `frontend-patterns` @ `everything-claude-code` | React/Next idioms: state management, hooks, performance (memoization, code splitting), client/server boundary. |
-| `api-design` @ `everything-claude-code` | REST design at production scale: resource naming, status codes, pagination, filtering, error responses, versioning, rate limiting. |
-| `postgres-patterns` @ `everything-claude-code` | PostgreSQL query optimization, schema design, indexing strategy, security (RLS, roles) — based on Supabase best practices. |
-| `e2e-testing` @ `everything-claude-code` | Playwright E2E: Page Object Model, CI/CD integration, artifact management (screenshots/videos/traces), flaky test strategies. |
-| `claude-api` @ `everything-claude-code` | Anthropic SDK patterns (Python + TS): Messages API, streaming, tool use, vision, extended thinking, batches, prompt caching, Agent SDK. |
 | `agent-sdk-dev` @ `claude-plugins-official` | Scaffolding for new Claude Agent SDK applications — boilerplate avoidance, project setup, recommended structure. |
 | `stripe` @ `claude-plugins-official` | Stripe integration: best practices, error code explainer, test card numbers for various scenarios. |
 | `rust-analyzer-lsp` @ `claude-plugins-official` | Rust LSP integrated into CC — go-to-definition, type hints, refactoring while editing Rust code. |
@@ -77,12 +71,10 @@ Author's bundle, not publicly distributable. Each fills a specific gap:
 
 ## 🇧🇷 Resumo em PT-BR
 
-Package `programming` = stack patterns + tooling + MCPs do dia-a-dia.
-Inclui 10 deps cross-marketplace cobrindo: API design (REST escalável),
-frontend/backend patterns (React/Next + Node/Express), Postgres
-(otimização baseada em Supabase), E2E com Playwright, Anthropic SDK
-(streaming, tool use, prompt caching), Stripe, Firebase, Rust LSP, e
-scaffolding de Agent SDK.
+Package `programming` = tooling + MCPs do dia-a-dia (4 deps
+cross-marketplace): Stripe, Firebase, Rust LSP e scaffolding de
+Agent SDK. Patterns de stack ficam por conta dos bundles npx e
+skills locais — sem dependência do `everything-claude-code`.
 
 3 MCPs auto-configurados: `chrome-devtools` (DevTools ao vivo),
 `react-grab-mcp` (extrai contexto de componente React do DOM rodando),

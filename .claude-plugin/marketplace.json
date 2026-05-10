@@ -7,7 +7,6 @@
   "description": "Curadoria pessoal de skills Claude Code organizada por nicho",
   "allowCrossMarketplaceDependenciesOn": [
     "superpowers-marketplace",
-    "everything-claude-code",
     "claude-plugins-official",
     "agentmemory",
     "sleepwell",
@@ -35,13 +34,13 @@
       "name": "marketing",
       "source": "./plugins/marketing",
       "description": "Marketing digital, tráfego pago, SEO e CRO",
-      "version": "0.2.0"
+      "version": "0.3.0"
     },
     {
       "name": "programming",
       "source": "./plugins/programming",
       "description": "Backend, frontend web e mobile, testing, debugging, infra",
-      "version": "0.3.0"
+      "version": "0.5.0"
     },
     {
       "name": "workflow",

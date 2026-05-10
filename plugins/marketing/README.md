@@ -11,7 +11,6 @@ Curated skills for digital marketing — SEO, CRO, paid traffic, email, social.
 
 | Plugin @ Marketplace | Why it's curated |
 |---|---|
-| `seo` @ `everything-claude-code` | Technical SEO audit: on-page checks, structured data validation, Core Web Vitals review, sitemap/robots inspection. |
 | `toprank` @ `nowork-studio` | SEO ranking analysis and marketing toolkit for keyword tracking and SERP intelligence. |
 
 ## MCP servers (auto-configured)
@@ -39,10 +38,8 @@ _None yet._
 
 ## 🇧🇷 Resumo em PT-BR
 
-Package `marketing` = SEO essencial. Inclui o plugin `seo` da ECC
-(auditoria técnica: on-page, structured data, Core Web Vitals,
-sitemap/robots) e o `toprank` da nowork-studio (análise de ranking
-SEO e ferramentas de marketing).
+Package `marketing` = SEO essencial. Inclui o plugin `toprank` da
+nowork-studio (análise de ranking SEO e ferramentas de marketing).
 
 CRO, paid traffic, email e social do catálogo antigo foram pra
 quarentena no cleanup — não ficaram porque o autor não usa ativamente.
