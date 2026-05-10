@@ -1,30 +1,47 @@
 # Package: copy
 
-Curadoria de skills focadas em copywriting, headlines, conversão e escrita persuasiva.
+Curated skills for copywriting, headlines, conversion, and persuasive writing.
 
-## Skills autorais incluídas
+> **Why this package?** _Empty scaffold for now._ During the cleanup
+> the author quarantined all marketing/copywriting skills (paid-ads,
+> cold-email, copywriting bundles) — none survived the personal
+> usage filter. The slot exists for future curation when a copy
+> skill earns its place.
 
-_Nenhuma na v0.1._
+## Plugin dependencies (auto-installed)
 
-## Dependências de plugins (auto-instaladas)
+_None yet — cross-marketplace deps not mapped._
 
-_Nenhuma na v0.1 — deps cross-marketplace ainda não mapeadas._
+## MCP servers (auto-configured)
 
-## Setup adicional (3rd-party standalone)
+_None yet._
 
-_Nenhuma na v0.1._
+## Standalone setup (run `/copy-setup`)
 
-## Como instalar
+_None yet._
+
+## How to install
 
 ```bash
 /plugin marketplace add FelipeOFF/my-claude-code-skills
 /plugin install copy@myskills
 ```
 
-## Como remover
+## How to remove
 
 ```bash
 /plugin uninstall copy@myskills
 ```
 
-> Este package está em estágio inicial; conteúdo será populado em PRs subsequentes.
+> This package is in initial stage; content will be populated in
+> subsequent PRs as copy skills earn their slot.
+
+---
+
+## 🇧🇷 Resumo em PT-BR
+
+Package `copy` = casca vazia por enquanto. No cleanup que o autor fez,
+nenhuma skill de copywriting/headlines passou no filtro de uso real
+(`paid-ads`, `cold-email`, bundles de copywriting foram pra quarentena).
+O slot fica reservado pra curadoria futura quando alguma skill desse
+nicho de fato ganhar lugar.

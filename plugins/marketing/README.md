@@ -1,28 +1,49 @@
 # Package: marketing
 
-Curadoria de skills focadas em marketing digital — SEO, CRO, tráfego pago, email, social.
+Curated skills for digital marketing — SEO, CRO, paid traffic, email, social.
 
-## Skills autorais incluídas
+> **Why this package?** Light curation for now. The author kept only
+> SEO-focused tools that survived the cleanup. CRO/paid/email skills
+> from the original catalog were quarantined — none earned a permanent
+> slot under the "actually used" filter.
 
-_Nenhuma na v0.1._
+## Plugin dependencies (auto-installed)
 
-## Dependências de plugins (auto-instaladas)
+| Plugin @ Marketplace | Why it's curated |
+|---|---|
+| `seo` @ `everything-claude-code` | Technical SEO audit: on-page checks, structured data validation, Core Web Vitals review, sitemap/robots inspection. |
+| `toprank` @ `nowork-studio` | SEO ranking analysis and marketing toolkit for keyword tracking and SERP intelligence. |
 
-- `seo` @ `everything-claude-code` — auditoria técnica de SEO, on-page, structured data, Core Web Vitals.
+## MCP servers (auto-configured)
 
-## Setup adicional (3rd-party standalone)
+_None yet._
 
-_Nenhuma na v0.1._
+## Standalone setup (run `/marketing-setup`)
 
-## Como instalar
+_None yet._
+
+## How to install
 
 ```bash
 /plugin marketplace add FelipeOFF/my-claude-code-skills
 /plugin install marketing@myskills
 ```
 
-## Como remover
+## How to remove
 
 ```bash
 /plugin uninstall marketing@myskills
 ```
+
+---
+
+## 🇧🇷 Resumo em PT-BR
+
+Package `marketing` = SEO essencial. Inclui o plugin `seo` da ECC
+(auditoria técnica: on-page, structured data, Core Web Vitals,
+sitemap/robots) e o `toprank` da nowork-studio (análise de ranking
+SEO e ferramentas de marketing).
+
+CRO, paid traffic, email e social do catálogo antigo foram pra
+quarentena no cleanup — não ficaram porque o autor não usa ativamente.
+A lista pode crescer quando uma skill nova passar no filtro.

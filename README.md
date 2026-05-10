@@ -1,66 +1,79 @@
 # MySkills
 
-Marketplace pessoal de skills Claude Code, curado por
-[Felipe Oliveira](https://github.com/FelipeOFF) e organizado em
-packages temáticos instaláveis individualmente.
+> 🇧🇷 [Versão em Português](README.pt-BR.md)
 
-> **Por que packages?** Carregar 200+ skills toda sessão queima tokens
-> sem motivo. Aqui você instala só o nicho do trabalho atual.
+Personal Claude Code skills marketplace, curated by
+[Felipe Oliveira](https://github.com/FelipeOFF) and organized into
+themed packages installable individually.
+
+> **Why packages?** Loading 200+ skills every session burns tokens
+> for no reason. Here you install only the niche relevant to your
+> current work.
 
 ## Quick install
 
 ```bash
-# Uma vez por máquina
+# Once per machine
 /plugin marketplace add FelipeOFF/my-claude-code-skills
 
-# Por contexto de trabalho — instale só o que precisa agora
+# Per work context — install only what you need now
 /plugin install design@myskills
 /plugin install copy@myskills
 /plugin install marketing@myskills
 /plugin install programming@myskills
+/plugin install workflow@myskills
 ```
 
-## Packages disponíveis (v0.1)
+## Packages
 
-| Package | Escopo | README |
-|---|---|---|
-| `design` | UI/UX, design system, taste, mockups | [plugins/design/README.md](plugins/design/README.md) |
-| `copy` | Copywriting, headlines, escrita persuasiva | [plugins/copy/README.md](plugins/copy/README.md) |
-| `marketing` | SEO, CRO, tráfego pago, email, social | [plugins/marketing/README.md](plugins/marketing/README.md) |
-| `programming` | Backend, frontend web/mobile, testing, debugging | [plugins/programming/README.md](plugins/programming/README.md) |
+| Package | Scope | What's inside | Details |
+|---|---|---|---|
+| `design` | UI/UX, design system, taste, mockups | Stitch (Google Labs), Huashu, frontend-design plugin, image generation, style packs, 21st.dev Magic MCP | [→ design/README.md](plugins/design/README.md) |
+| `copy` | Copywriting, headlines, persuasive writing | _scaffold (no curated skills yet)_ | [→ copy/README.md](plugins/copy/README.md) |
+| `marketing` | SEO, CRO, paid traffic, email, social | SEO audit (ECC), TopRank | [→ marketing/README.md](plugins/marketing/README.md) |
+| `programming` | Backend, frontend web/mobile, testing, debugging, infra | ECC patterns (api-design, postgres, e2e), Stripe, Firebase, Agent SDK, Rust LSP, MCPs (chrome-devtools, react-grab, hostinger), TDD bundle | [→ programming/README.md](plugins/programming/README.md) |
+| `workflow` | Planning, memory, multi-phase, autonomous loops, multi-agent | superpowers, claude-mem, agentmemory, octo, codex, ralph-specum, sleepwell, GSD bundle (64 skills), find-skills, 1password | [→ workflow/README.md](plugins/workflow/README.md) |
 
-## Filosofia e regras
+## Why these skills?
 
-Toda decisão de "qual skill vai em qual package" segue uma constituição
-escrita: [`docs/CONSTITUTION.md`](docs/CONSTITUTION.md).
+This is **active personal curation**, not an exhaustive catalog. Every
+skill listed here was selected because the author actually uses it in
+real projects. Reasons cluster into:
 
-Resumo:
+- **Override LLM defaults**: design-taste skills, frontend-patterns, code-reviewer — LLMs default to generic outputs; these skills inject opinionated rules.
+- **Cross-session memory**: claude-mem, agentmemory — long projects lose context without persistent memory.
+- **Multi-phase planning**: GSD, ralph-specum, superpowers — features that span days need structure (PLAN.md, REVIEW.md, milestones).
+- **MCP integrations**: chrome-devtools, hostinger, magic — tools the author uses daily get auto-configured (env vars stay personal).
+- **Stack patterns**: Anthropic SDK, Postgres, REST design — opinionated patterns, not generic boilerplate.
 
-- **Regra A — Localização única.** Uma skill, um package.
-- **Regra B — Top-level por default.** Mid-level só com >15 skills + agrupamento ≥5.
-- **Regra C — Frontmatter declara origem.** `authored | dependency | standalone-setup`.
-- **Regra D — README de package padronizado.**
-- **Regra E — Constituição é a fonte da verdade.**
+Each package README explains why **each** included skill is in the curation.
 
-## Workflow autoral PT-BR/Jira (raiz do repo)
+## Philosophy and rules
 
-Os diretórios `agents/`, `commands/` e `rules/` na raiz **não** são
-parte dos packages. Eles são consumidos via `~/.claude/CLAUDE.md`
-global e suportam o workflow pessoal do autor (Conventional Commits +
-Jira `DTP-###`, branches `<type>/<JIRA>/<slug>`, PRs em PT-BR).
+Every "which skill goes in which package" decision follows a written
+constitution: [`docs/CONSTITUTION.md`](docs/CONSTITUTION.md).
+
+Summary:
+
+- **Rule A — Single location.** One skill, one package.
+- **Rule B — Top-level by default.** Mid-level only with >15 skills + ≥5 cohesive cluster.
+- **Rule C — Frontmatter declares origin.** `authored | dependency | standalone-setup`.
+- **Rule D — Standardized package README.**
+- **Rule E — The Constitution is the source of truth.**
+
+## Author's PT-BR/Jira workflow (repo root)
+
+The directories `agents/`, `commands/`, and `rules/` at the root are
+**not** part of any package. They're consumed via `~/.claude/CLAUDE.md`
+global and support the author's personal workflow (Conventional Commits +
+Jira `DTP-###`, branches `<type>/<JIRA>/<slug>`, PRs in PT-BR).
 
 - `agents/` — `commit-crafter`, `jira-linker`, `pr-writer`
 - `commands/` — `/branch`, `/commit`, `/pr`, `/review`, `/wt`
 - `rules/` — `branches`, `commits`, `context7`, `language`, `workflow`
 
-## Histórico
+## Contribute / curation
 
-A versão monolítica do README (catálogo de 959 linhas pré-v0.1) está
-preservada em [`docs/legacy/README-2026-05-10.md`](docs/legacy/README-2026-05-10.md).
-
-## Contribuir / curadoria
-
-Esta é uma curadoria **pessoal**. Sugestões via issues são bem-vindas,
-mas a inclusão segue critérios da Constituição. Para abrir PR
-adicionando uma skill, leia primeiro
-[`docs/CONSTITUTION.md`](docs/CONSTITUTION.md).
+This is a **personal** curation. Issues with suggestions are welcome,
+but inclusion follows Constitution criteria. To open a PR adding a
+skill, read [`docs/CONSTITUTION.md`](docs/CONSTITUTION.md) first.

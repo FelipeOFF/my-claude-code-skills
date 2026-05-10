@@ -1,55 +1,98 @@
 # Package: programming
 
-Curadoria de skills de programação — backend, frontend (web e mobile), testing, debugging.
+Curated skills for backend, frontend (web and mobile), testing, debugging, and infra.
 
-## Dependências de plugins (auto-instaladas)
+> **Why this package?** Stack-specific patterns + dev workflow tooling
+> + MCPs the author runs daily. Each dep is a battle-tested override
+> for LLM defaults: typed Anthropic SDK usage, REST design that scales,
+> Playwright E2E with proper artifact handling. Generic boilerplate
+> need not apply.
 
-- `backend-patterns` @ `everything-claude-code` — APIs, data layer, server-side patterns (Node.js, Express, Next.js).
-- `frontend-patterns` @ `everything-claude-code` — React/Next, state management, performance, UI.
-- `api-design` @ `everything-claude-code` — REST design, status codes, paginação, error responses, versioning.
-- `postgres-patterns` @ `everything-claude-code` — query optimization, schema design, indexing, security.
-- `e2e-testing` @ `everything-claude-code` — Playwright, Page Object Model, CI/CD, artifact management.
-- `claude-api` @ `everything-claude-code` — Anthropic SDK patterns: Messages API, streaming, tool use, prompt caching, Agent SDK.
+## Plugin dependencies (auto-installed)
 
-## Setup adicional (3rd-party standalone)
-
-Rode `/programming-setup` para instalar:
-
-| Skill | Fonte |
+| Plugin @ Marketplace | Why it's curated |
 |---|---|
-| `tdd`, `to-prd` | [mattpocock/skills](https://github.com/mattpocock/skills) |
-| `obscura` | [FelipeOFF/obscura-skill](https://github.com/FelipeOFF/obscura-skill) |
-| `render-plans-to-html` | [FelipeOFF/render-plans-to-html](https://github.com/FelipeOFF/render-plans-to-html) |
+| `backend-patterns` @ `everything-claude-code` | API architecture for Node.js/Express/Next.js — service layers, error handling, validation, async patterns. |
+| `frontend-patterns` @ `everything-claude-code` | React/Next idioms: state management, hooks, performance (memoization, code splitting), client/server boundary. |
+| `api-design` @ `everything-claude-code` | REST design at production scale: resource naming, status codes, pagination, filtering, error responses, versioning, rate limiting. |
+| `postgres-patterns` @ `everything-claude-code` | PostgreSQL query optimization, schema design, indexing strategy, security (RLS, roles) — based on Supabase best practices. |
+| `e2e-testing` @ `everything-claude-code` | Playwright E2E: Page Object Model, CI/CD integration, artifact management (screenshots/videos/traces), flaky test strategies. |
+| `claude-api` @ `everything-claude-code` | Anthropic SDK patterns (Python + TS): Messages API, streaming, tool use, vision, extended thinking, batches, prompt caching, Agent SDK. |
+| `agent-sdk-dev` @ `claude-plugins-official` | Scaffolding for new Claude Agent SDK applications — boilerplate avoidance, project setup, recommended structure. |
+| `stripe` @ `claude-plugins-official` | Stripe integration: best practices, error code explainer, test card numbers for various scenarios. |
+| `rust-analyzer-lsp` @ `claude-plugins-official` | Rust LSP integrated into CC — go-to-definition, type hints, refactoring while editing Rust code. |
+| `firebase` @ `firebase` | Firebase deploy, env management, project init, security rules, SDK config — full lifecycle for Firebase apps. |
 
-## Skills locais (sem fonte pública mapeada)
+## MCP servers (auto-configured)
 
-Documentadas como parte da curadoria do autor.
+| MCP | Command | Required env | Why it's curated |
+|---|---|---|---|
+| `chrome-devtools` | `npx chrome-devtools-mcp@latest` | none | Live Chrome DevTools control: inspect DOM, debug runtime, profile performance directly from CC. |
+| `react-grab-mcp` | `npx -y @react-grab/mcp --stdio` | none | Extracts React component context (props, state, source location) from a running app — bridges DOM inspection and component code. |
+| `hostinger-mcp` | `npx hostinger-api-mcp@latest` | `HOSTINGER_API_TOKEN` | Manages Hostinger VPS, DNS, domains, hosting, billing via API — the author's host of choice. |
 
-- `backend-code-review` — checklist de review para arquivos backend (`.py`).
-- `frontend-code-review` — checklist de review para arquivos frontend (`.tsx`, `.ts`, `.js`).
-- `code-reviewer` — review geral focado em segurança, performance e best practices.
-- `debugger` — debugging sistemático com root cause analysis.
-- `defuddle` — extrai markdown limpo de páginas web (alternativa ao WebFetch para economizar tokens).
-- `frontend-testing` — Vitest + React Testing Library.
-- `fuzzing-dictionary` — fuzzing dictionaries com tokens domain-specific.
-- `fuzzing-obstacles` — técnicas para superar obstáculos de fuzzing (checksums, magic numbers).
+> Personal credentials live in your env vars — never committed here.
+
+## Standalone setup (run `/programming-setup`)
+
+| Skill / Bundle | Source | Why it's curated |
+|---|---|---|
+| `tdd`, `to-prd` | [mattpocock/skills](https://github.com/mattpocock/skills) | `tdd` runs strict red-green-refactor; `to-prd` turns chat context into a GitHub issue PRD — both reduce friction in feature lifecycle. |
+| `obscura` | [FelipeOFF/obscura-skill](https://github.com/FelipeOFF/obscura-skill) | Scraping/E2E with a Rust-based headless browser (~30 MB) compatible with Puppeteer/Playwright over CDP — light footprint, stealth on. |
+| `render-plans-to-html` | [FelipeOFF/render-plans-to-html](https://github.com/FelipeOFF/render-plans-to-html) | Renders planning Markdown (PLAN.md, REVIEW.md, etc.) as a self-contained HTML dashboard with sidebar nav, mermaid diagrams, syntax highlighting — for sharing artifacts with non-engineers. |
+
+## Local-only skills (no public source mapped)
+
+Author's bundle, not publicly distributable. Each fills a specific gap:
+
+- `backend-code-review` — checklist-driven review for backend files (`.py`, `api/` paths).
+- `frontend-code-review` — checklist for frontend files (`.tsx`, `.ts`, `.js`).
+- `code-reviewer` — general security/performance/best-practices review (cross-stack).
+- `debugger` — systematic root-cause analysis with stack-trace dissection.
+- `defuddle` — cleans markdown from web pages (saves tokens vs raw WebFetch HTML).
+- `frontend-testing` — Vitest + React Testing Library generation patterns.
+- `fuzzing-dictionary` — domain-specific tokens for guiding fuzzers (AFL++, OSS-Fuzz).
+- `fuzzing-obstacles` — patches around checksums/magic-numbers/anti-debug to unblock fuzz coverage.
 - `property-based-testing` — PBT cross-language (Hypothesis, fast-check, proptest, QuickCheck).
-- `context7-mcp` — heurísticas para chamar Context7 MCP.
+- `context7-mcp` — heuristics for when to call the Context7 MCP (vs trusting training data).
 
-## Como instalar
+## How to install
 
 ```bash
 /plugin marketplace add FelipeOFF/my-claude-code-skills
 /plugin install programming@myskills
-/programming-setup   # opcional, instala standalone 3rd-party
+/programming-setup   # optional — installs 3rd-party standalone bundles
 ```
 
-## Como remover
+## How to remove
 
 ```bash
 /plugin uninstall programming@myskills
 ```
 
-> Quando o package atingir >15 skills com agrupamento natural (≥5),
-> Regra B da Constituição prevê promoção para mid-level
-> (ex: `programming-frontend-mobile@myskills`).
+> When this package crosses >15 skills with a natural ≥5 cluster,
+> Constitution Rule B promotes to mid-level (e.g., `programming-frontend-mobile@myskills`).
+
+---
+
+## 🇧🇷 Resumo em PT-BR
+
+Package `programming` = stack patterns + tooling + MCPs do dia-a-dia.
+Inclui 10 deps cross-marketplace cobrindo: API design (REST escalável),
+frontend/backend patterns (React/Next + Node/Express), Postgres
+(otimização baseada em Supabase), E2E com Playwright, Anthropic SDK
+(streaming, tool use, prompt caching), Stripe, Firebase, Rust LSP, e
+scaffolding de Agent SDK.
+
+3 MCPs auto-configurados: `chrome-devtools` (DevTools ao vivo),
+`react-grab-mcp` (extrai contexto de componente React do DOM rodando),
+e `hostinger-mcp` (gerencia VPS/DNS — precisa de `HOSTINGER_API_TOKEN`
+pessoal). Credenciais ficam em env vars.
+
+Via `/programming-setup`: bundle Matt Pocock (`tdd` + `to-prd`),
+`obscura` (scraping com browser Rust) e `render-plans-to-html`
+(renderiza PLAN.md/REVIEW.md como dashboard HTML).
+
+Local-only (sem fonte pública): code-reviewers (backend/frontend/geral),
+debugger sistemático, fuzzing toolchain (PBT, dictionaries, obstacles),
+e helpers de testing/parsing (frontend-testing, defuddle, context7-mcp).

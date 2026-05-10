@@ -1,7 +1,7 @@
 {
   "name": "programming",
-  "version": "0.2.0",
-  "description": "Curadoria de skills de backend, frontend web/mobile, testing e debugging",
+  "version": "0.4.0",
+  "description": "Backend, frontend web e mobile, testing, debugging, infra",
   "author": {
     "name": "Felipe Oliveira",
     "url": "https://github.com/FelipeOFF"
@@ -12,6 +12,30 @@
     { "name": "api-design", "marketplace": "everything-claude-code" },
     { "name": "postgres-patterns", "marketplace": "everything-claude-code" },
     { "name": "e2e-testing", "marketplace": "everything-claude-code" },
-    { "name": "claude-api", "marketplace": "everything-claude-code" }
-  ]
+    { "name": "claude-api", "marketplace": "everything-claude-code" },
+    { "name": "agent-sdk-dev", "marketplace": "claude-plugins-official" },
+    { "name": "stripe", "marketplace": "claude-plugins-official" },
+    { "name": "rust-analyzer-lsp", "marketplace": "claude-plugins-official" },
+    { "name": "firebase", "marketplace": "firebase" }
+  ],
+  "mcpServers": {
+    "chrome-devtools": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["chrome-devtools-mcp@latest"]
+    },
+    "react-grab-mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@react-grab/mcp", "--stdio"]
+    },
+    "hostinger-mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["hostinger-api-mcp@latest"],
+      "env": {
+        "API_TOKEN": "${HOSTINGER_API_TOKEN}"
+      }
+    }
+  }
 }
