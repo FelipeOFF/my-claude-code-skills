@@ -10,6 +10,10 @@ Curadoria de skills de programação — backend, frontend (web e mobile), testi
 - `postgres-patterns` @ `everything-claude-code` — query optimization, schema design, indexing, security.
 - `e2e-testing` @ `everything-claude-code` — Playwright, Page Object Model, CI/CD, artifact management.
 - `claude-api` @ `everything-claude-code` — Anthropic SDK patterns: Messages API, streaming, tool use, prompt caching, Agent SDK.
+- `agent-sdk-dev` @ `claude-plugins-official` — scaffolding e setup de novas apps Agent SDK.
+- `stripe` @ `claude-plugins-official` — best practices, error explainer, test cards.
+- `rust-analyzer-lsp` @ `claude-plugins-official` — LSP de Rust integrado ao CC.
+- `firebase` @ `firebase` — deploy, env, projects, security rules, SDK config.
 
 ## Setup adicional (3rd-party standalone)
 
