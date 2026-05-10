@@ -1,18 +1,12 @@
 {
   "name": "programming",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Backend, frontend web e mobile, testing, debugging, infra",
   "author": {
     "name": "Felipe Oliveira",
     "url": "https://github.com/FelipeOFF"
   },
   "dependencies": [
-    { "name": "backend-patterns", "marketplace": "everything-claude-code" },
-    { "name": "frontend-patterns", "marketplace": "everything-claude-code" },
-    { "name": "api-design", "marketplace": "everything-claude-code" },
-    { "name": "postgres-patterns", "marketplace": "everything-claude-code" },
-    { "name": "e2e-testing", "marketplace": "everything-claude-code" },
-    { "name": "claude-api", "marketplace": "everything-claude-code" },
     { "name": "agent-sdk-dev", "marketplace": "claude-plugins-official" },
     { "name": "stripe", "marketplace": "claude-plugins-official" },
     { "name": "rust-analyzer-lsp", "marketplace": "claude-plugins-official" },

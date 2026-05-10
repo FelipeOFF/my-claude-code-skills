@@ -11,7 +11,6 @@ Curated skills for digital marketing — SEO, CRO, paid traffic, email, social.
 
 | Plugin @ Marketplace | Why it's curated |
 |---|---|
-| `seo` @ `everything-claude-code` | Technical SEO audit: on-page checks, structured data validation, Core Web Vitals review, sitemap/robots inspection. |
 | `toprank` @ `nowork-studio` | SEO ranking analysis and marketing toolkit for keyword tracking and SERP intelligence. |
 
 ## MCP servers (auto-configured)
@@ -20,7 +19,12 @@ _None yet._
 
 ## Standalone setup (run `/marketing-setup`)
 
-_None yet._
+Skill instalada individualmente via `npx skills add --skill <name>` —
+pulls just the skill, not the parent bundle.
+
+| Skill | Source | Why it's curated |
+|---|---|---|
+| `seo` | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code/tree/main/skills/seo) | Technical SEO audit: on-page checks, structured data validation, Core Web Vitals review, sitemap/robots inspection. |
 
 ## How to install
 
@@ -39,10 +43,11 @@ _None yet._
 
 ## 🇧🇷 Resumo em PT-BR
 
-Package `marketing` = SEO essencial. Inclui o plugin `seo` da ECC
-(auditoria técnica: on-page, structured data, Core Web Vitals,
-sitemap/robots) e o `toprank` da nowork-studio (análise de ranking
-SEO e ferramentas de marketing).
+Package `marketing` = SEO essencial. Inclui o plugin `toprank` da
+nowork-studio (análise de ranking SEO e ferramentas de marketing)
+como dependência cross-marketplace, e a skill `seo` (auditoria
+técnica) instalada standalone via `/marketing-setup` direto do repo
+`affaan-m/everything-claude-code` — sem dependência do bundle inteiro.
 
 CRO, paid traffic, email e social do catálogo antigo foram pra
 quarentena no cleanup — não ficaram porque o autor não usa ativamente.
