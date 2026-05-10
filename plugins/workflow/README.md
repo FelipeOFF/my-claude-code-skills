@@ -17,9 +17,11 @@ debugging multi-sessão, multi-agent orchestration.
 
 Rode `/workflow-setup` para instalar:
 
-| Bundle | Fonte | Skills incluídas |
+| Bundle/Skill | Fonte | Skills incluídas |
 |---|---|---|
 | GSD — Get Shit Done | [glittercowboy/get-shit-done](https://github.com/glittercowboy/get-shit-done) | 64 skills `gsd-*` (planejamento, execução, verificação, milestones, workstreams) |
+| `find-skills` | [vercel-labs/skills](https://github.com/vercel-labs/skills/tree/main/skills/find-skills) | Discovery e install de skills via `npx skills` |
+| `1password` | [openclaw/openclaw](https://github.com/openclaw/openclaw/tree/main/skills/1password) | Setup e uso do 1Password CLI (`op`) |
 
 ## Como instalar
 
