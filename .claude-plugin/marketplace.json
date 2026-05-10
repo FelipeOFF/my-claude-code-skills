@@ -8,6 +8,7 @@
   "allowCrossMarketplaceDependenciesOn": [
     "superpowers-marketplace",
     "everything-claude-code",
+    "claude-plugins-official",
     "octo",
     "agentmemory",
     "stripe",
