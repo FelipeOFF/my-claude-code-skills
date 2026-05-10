@@ -9,18 +9,21 @@
     "superpowers-marketplace",
     "everything-claude-code",
     "claude-plugins-official",
-    "octo",
     "agentmemory",
-    "stripe",
     "sleepwell",
-    "ralph-specum"
+    "nyldn-plugins",
+    "smart-ralph",
+    "thedotmack",
+    "openai-codex",
+    "firebase",
+    "nowork-studio"
   ],
   "plugins": [
     {
       "name": "design",
       "source": "./plugins/design",
       "description": "Skills de UI/UX, design system e taste",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
       "name": "copy",
@@ -32,12 +35,18 @@
       "name": "marketing",
       "source": "./plugins/marketing",
       "description": "Marketing digital, tráfego pago, SEO e CRO",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
       "name": "programming",
       "source": "./plugins/programming",
-      "description": "Backend, frontend web e mobile",
+      "description": "Backend, frontend web e mobile, testing, debugging, infra",
+      "version": "0.3.0"
+    },
+    {
+      "name": "workflow",
+      "source": "./plugins/workflow",
+      "description": "Meta-workflow: planning, memory, multi-phase, autonomous loops",
       "version": "0.1.0"
     }
   ]
