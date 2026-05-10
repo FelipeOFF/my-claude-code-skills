@@ -13,6 +13,7 @@ Rode `/design-setup` para instalar:
 | Skill | Fonte |
 |---|---|
 | `frontend-project-style` | [FelipeOFF/frontend-project-style-skill](https://github.com/FelipeOFF/frontend-project-style-skill) |
+| `design-advisor` | [FelipeOFF/design-advisor-skill](https://github.com/FelipeOFF/design-advisor-skill) |
 | `stitch-design`, `stitch-loop`, `taste-design`, `design-md`, `enhance-prompt` | [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) |
 | `huashu-design` | [alchaincyf/huashu-design](https://github.com/alchaincyf/huashu-design) |
 | `design-an-interface` | [mattpocock/skills](https://github.com/mattpocock/skills) |

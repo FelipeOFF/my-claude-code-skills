@@ -13,6 +13,12 @@ Execute os comandos abaixo via Bash em ordem. Após cada bloco, confirme com `/f
 npx skills add git@github.com:FelipeOFF/frontend-project-style-skill.git -y
 ```
 
+## 1b. Design Advisor (autoral do Felipe)
+
+```bash
+npx skills add git@github.com:FelipeOFF/design-advisor-skill.git -y
+```
+
 ## 2. Stitch bundle (Google Labs)
 
 Inclui `stitch-design`, `stitch-loop`, `taste-design`, `design-md`, `enhance-prompt` e outras.
