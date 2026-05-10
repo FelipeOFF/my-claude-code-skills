@@ -6,6 +6,15 @@ Curadoria de skills focadas em design visual, UI/UX, design system e taste.
 
 - `frontend-design` @ `claude-plugins-official` — interfaces frontend production-grade com taste alto, override de defaults genéricos do LLM.
 
+## MCPs auto-configurados
+
+| MCP | Comando | Env vars necessárias |
+|---|---|---|
+| `magic` | `npx -y @21st-dev/magic@latest` | `TWENTYFIRST_API_KEY` |
+
+> Defina a env var antes de usar (ex: `export TWENTYFIRST_API_KEY=...` no shell rc).
+> A chave é pessoal — não é compartilhada por este marketplace.
+
 ## Setup adicional (3rd-party standalone)
 
 Rode `/design-setup` para instalar:

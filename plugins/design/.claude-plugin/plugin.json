@@ -1,6 +1,6 @@
 {
   "name": "design",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Curadoria de skills de design — UI/UX, design system, taste",
   "author": {
     "name": "Felipe Oliveira",
@@ -8,5 +8,15 @@
   },
   "dependencies": [
     { "name": "frontend-design", "marketplace": "claude-plugins-official" }
-  ]
+  ],
+  "mcpServers": {
+    "magic": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@21st-dev/magic@latest"],
+      "env": {
+        "API_KEY": "${TWENTYFIRST_API_KEY}"
+      }
+    }
+  }
 }

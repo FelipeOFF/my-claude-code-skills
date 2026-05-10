@@ -15,6 +15,17 @@ Curadoria de skills de programação — backend, frontend (web e mobile), testi
 - `rust-analyzer-lsp` @ `claude-plugins-official` — LSP de Rust integrado ao CC.
 - `firebase` @ `firebase` — deploy, env, projects, security rules, SDK config.
 
+## MCPs auto-configurados
+
+| MCP | Comando | Env vars necessárias |
+|---|---|---|
+| `chrome-devtools` | `npx chrome-devtools-mcp@latest` | nenhuma |
+| `react-grab-mcp` | `npx -y @react-grab/mcp --stdio` | nenhuma |
+| `hostinger-mcp` | `npx hostinger-api-mcp@latest` | `HOSTINGER_API_TOKEN` |
+
+> Onde houver env var, defina antes de usar. Tokens/chaves são pessoais —
+> não são compartilhados por este marketplace.
+
 ## Setup adicional (3rd-party standalone)
 
 Rode `/programming-setup` para instalar:
