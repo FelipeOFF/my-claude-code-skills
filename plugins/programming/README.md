@@ -29,8 +29,17 @@ Curated skills for backend, frontend (web and mobile), testing, debugging, and i
 
 ## Standalone setup (run `/programming-setup`)
 
-| Skill / Bundle | Source | Why it's curated |
+Skills installed individually via `npx skills add --skill <name>` —
+pulls just the skill, not the parent bundle.
+
+| Skill | Source | Why it's curated |
 |---|---|---|
+| `backend-patterns` | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code/tree/main/skills/backend-patterns) | API architecture for Node.js/Express/Next.js — service layers, error handling, validation, async patterns. |
+| `frontend-patterns` | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code/tree/main/skills/frontend-patterns) | React/Next idioms: state management, hooks, performance (memoization, code splitting), client/server boundary. |
+| `api-design` | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code/tree/main/skills/api-design) | REST design at production scale: resource naming, status codes, pagination, filtering, error responses, versioning, rate limiting. |
+| `postgres-patterns` | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code/tree/main/skills/postgres-patterns) | PostgreSQL query optimization, schema design, indexing strategy, security (RLS, roles) — based on Supabase best practices. |
+| `e2e-testing` | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code/tree/main/skills/e2e-testing) | Playwright E2E: Page Object Model, CI/CD integration, artifact management (screenshots/videos/traces), flaky test strategies. |
+| `claude-api` | [anthropics/skills](https://github.com/anthropics/skills/tree/main/skills/claude-api) | **Oficial da Anthropic.** Padrões do Claude API: Messages API, streaming, tool use, vision, extended thinking, batches, prompt caching, Agent SDK. |
 | `tdd`, `to-prd` | [mattpocock/skills](https://github.com/mattpocock/skills) | `tdd` runs strict red-green-refactor; `to-prd` turns chat context into a GitHub issue PRD — both reduce friction in feature lifecycle. |
 | `obscura` | [FelipeOFF/obscura-skill](https://github.com/FelipeOFF/obscura-skill) | Scraping/E2E with a Rust-based headless browser (~30 MB) compatible with Puppeteer/Playwright over CDP — light footprint, stealth on. |
 | `render-plans-to-html` | [FelipeOFF/render-plans-to-html](https://github.com/FelipeOFF/render-plans-to-html) | Renders planning Markdown (PLAN.md, REVIEW.md, etc.) as a self-contained HTML dashboard with sidebar nav, mermaid diagrams, syntax highlighting — for sharing artifacts with non-engineers. |
@@ -73,8 +82,13 @@ Author's bundle, not publicly distributable. Each fills a specific gap:
 
 Package `programming` = tooling + MCPs do dia-a-dia (4 deps
 cross-marketplace): Stripe, Firebase, Rust LSP e scaffolding de
-Agent SDK. Patterns de stack ficam por conta dos bundles npx e
-skills locais — sem dependência do `everything-claude-code`.
+Agent SDK. Sem dependência do bundle `everything-claude-code`.
+
+Os 6 stack patterns (backend-patterns, frontend-patterns, api-design,
+postgres-patterns, e2e-testing, claude-api) são instalados via
+`/programming-setup` direto do source (`affaan-m/everything-claude-code`
+e `anthropics/skills`), usando `npx skills add --skill <name>` — pega
+só a skill específica sem trazer o bundle inteiro.
 
 3 MCPs auto-configurados: `chrome-devtools` (DevTools ao vivo),
 `react-grab-mcp` (extrai contexto de componente React do DOM rodando),
