@@ -18,16 +18,18 @@ packages temáticos instaláveis individualmente.
 /plugin install copy@myskills
 /plugin install marketing@myskills
 /plugin install programming@myskills
+/plugin install workflow@myskills
 ```
 
-## Packages disponíveis (v0.1)
+## Packages disponíveis
 
 | Package | Escopo | README |
 |---|---|---|
 | `design` | UI/UX, design system, taste, mockups | [plugins/design/README.md](plugins/design/README.md) |
 | `copy` | Copywriting, headlines, escrita persuasiva | [plugins/copy/README.md](plugins/copy/README.md) |
 | `marketing` | SEO, CRO, tráfego pago, email, social | [plugins/marketing/README.md](plugins/marketing/README.md) |
-| `programming` | Backend, frontend web/mobile, testing, debugging | [plugins/programming/README.md](plugins/programming/README.md) |
+| `programming` | Backend, frontend web/mobile, testing, debugging, infra | [plugins/programming/README.md](plugins/programming/README.md) |
+| `workflow` | Planning, memória, multi-phase, autonomous loops, multi-agent | [plugins/workflow/README.md](plugins/workflow/README.md) |
 
 ## Filosofia e regras
 

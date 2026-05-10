@@ -4,18 +4,19 @@
 > Lido por Claude Code em sessões dentro deste repo para rotear
 > automaticamente comandos como "sobe a skill X aqui".
 
-**Versão:** 1.0 (2026-05-10)
+**Versão:** 1.1 (2026-05-10)
 
 ---
 
-## Packages top-level (v0.1)
+## Packages top-level
 
 | Package | Escopo |
 |---|---|
 | `design` | UI/UX, design system, taste, mockups, prototipagem visual. |
 | `copy` | Copywriting, headlines, escrita persuasiva, edição. |
 | `marketing` | SEO, CRO, tráfego pago, email, social, growth. |
-| `programming` | Backend, frontend (web e mobile), testing, debugging, stacks. |
+| `programming` | Backend, frontend (web e mobile), testing, debugging, infra, stacks. |
+| `workflow` | Meta-workflow: planning, memória, multi-phase, autonomous loops, multi-agent orchestration. |
 
 Skills autorais do Felipe que **não** entram em packages: agents
 (`commit-crafter`, `jira-linker`, `pr-writer`), commands (`branch`,
