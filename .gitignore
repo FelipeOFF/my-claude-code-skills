@@ -11,3 +11,4 @@ specs/.current-epic
 # Artefatos de instalação local de skills (não devem entrar no repo)
 .agents/
 skills-lock.json
+specs/*
