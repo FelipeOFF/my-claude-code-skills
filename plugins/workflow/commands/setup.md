@@ -5,6 +5,11 @@ description: Instala skills standalone do package workflow (3rd-party fora de ma
 
 # /workflow-setup
 
+> **Fallback manual / re-execução.** A instalação destas skills roda automaticamente
+> no primeiro `SessionStart` após `/plugin install workflow@myskills`
+> (ver `scripts/bootstrap.sh`). Use este comando para forçar re-instalação,
+> debugar bootstrap quebrado, ou rodar sem depender do marker.
+
 Execute via Bash. Confirme com `/find-skills gsd` ao final.
 
 ## 1. GSD — Get Shit Done (bundle de 64 skills de gerenciamento de fases)

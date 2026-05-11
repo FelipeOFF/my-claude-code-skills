@@ -1,3 +1,13 @@
 # Planejamento e documentação interna não versionados publicamente
 docs/superpowers/
 docs/legacy/
+
+# Spec state (mantém apenas os artefatos versionáveis)
+specs/.current-spec
+specs/.current-epic
+**/.progress.md
+**/.ralph-state.json
+
+# Artefatos de instalação local de skills (não devem entrar no repo)
+.agents/
+skills-lock.json
