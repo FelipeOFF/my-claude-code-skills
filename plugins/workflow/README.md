@@ -26,7 +26,7 @@ multi-session debugging, multi-agent orchestration.
 _None directly. The plugin deps above each declare their own MCPs
 when needed (e.g., `claude-mem` brings `mcp-search`)._
 
-## Standalone setup (run `/workflow-setup`)
+## Standalone setup (auto)
 
 | Skill / Bundle | Source | Why it's curated |
 |---|---|---|
@@ -39,8 +39,29 @@ when needed (e.g., `claude-mem` brings `mcp-search`)._
 ```bash
 /plugin marketplace add FelipeOFF/my-claude-code-skills
 /plugin install workflow@myskills
-/workflow-setup   # installs GSD bundle, find-skills, 1password via npx
 ```
+
+Standalones (GSD, find-skills, 1password) são instaladas automaticamente
+na primeira sessão pós-install via hook `SessionStart` + `scripts/bootstrap.sh`.
+Marker em `${CLAUDE_PLUGIN_DATA}/.bootstrapped-v<version>` garante idempotência.
+
+### Re-instalação / fallback
+
+Se o bootstrap automático falhar (offline na 1ª sessão, fonte temporariamente
+fora do ar, etc.), rode manualmente:
+
+```bash
+/workflow-setup
+```
+
+Para forçar re-bootstrap em sessão futura (ex: depois de limpar `~/.skills/`),
+delete o marker:
+
+```bash
+rm "${CLAUDE_PLUGIN_DATA}/.bootstrapped-v"*
+```
+
+Decisão de arquitetura: ver [`docs/adr/ADR-001-auto-install-strategy.md`](../../docs/adr/ADR-001-auto-install-strategy.md).
 
 ## How to remove
 
