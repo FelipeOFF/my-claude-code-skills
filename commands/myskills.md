@@ -160,14 +160,56 @@ feat(<pkg>): Adiciona skill <nome>
 
 ## FLUXO SYNC
 
-Sincronizar o repo local com o GitHub e resolver diferenças.
+Auto-sync das skills instaladas localmente com o repo myskills, gerando PR com as diferenças.
+
+### Passo 1 — Inventariar skills instaladas localmente
 
 ```bash
-cd ~/Projects/my-claude-code-skills && git status && git log --oneline origin/main..HEAD
+# Skills standalone instaladas via skills CLI
+ls ~/.claude/skills/ 2>/dev/null | sort
+
+# Skills do myskills repo (já versionadas)
+for pkg in design copy marketing programming workflow; do
+  echo "=== $pkg ==="
+  ls ~/Projects/my-claude-code-skills/plugins/$pkg/skills/ 2>/dev/null
+done
 ```
 
-Se há commits locais não pushados: oferecer criar PR.
-Se há commits remotos mais novos: `git pull --rebase origin main`.
+### Passo 2 — Detectar diferenças
+
+Comparar as duas listas:
+- **Skills locais não documentadas no repo** → candidatas a adicionar
+- **Skills documentadas no repo mas não instaladas** → candidatas a remover ou marcar como `source: standalone-setup`
+- **Skills de plugins (enabledPlugins)** → já documentadas via deps, ignorar
+
+Filtrar falsos positivos: skills do GSD (`gsd-*`), superpowers, ruflo, octo, claude-mem, codex, ralph-specum, sleepwell **não entram no myskills** — são deps de plugins, não curadoria manual.
+
+### Passo 3 — Para cada nova skill detectada
+
+Aplicar o mesmo fluxo do **FLUXO ADD**:
+1. Classificar por Regra A → package correto
+2. Criar stub SKILL.md com `source: standalone-setup` (ou `authored` se for autoral)
+3. Atualizar README do package
+4. Não commitar ainda — acumular todas as mudanças
+
+### Passo 4 — Criar branch e PR
+
+```bash
+cd ~/Projects/my-claude-code-skills
+git checkout -b chore/sync_skills_$(date +%Y%m%d)
+git add -A
+git commit -m "chore: Auto-sync skills instaladas localmente
+
+Skills adicionadas: <lista>
+Skills removidas: <lista>
+Gerado via /myskills sync"
+git push origin chore/sync_skills_$(date +%Y%m%d)
+gh pr create --title "chore: Auto-sync skills $(date +%Y-%m-%d)" --body "..."
+```
+
+### Passo 5 — Mostrar resumo
+
+Listar o que mudou e retornar URL do PR criado.
 
 ---
 
