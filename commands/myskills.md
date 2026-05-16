@@ -70,9 +70,12 @@ Montar tabela PT-BR com status por package:
 
 Depois mostrar: **O que falta instalar** com os comandos exatos.
 
-Packages não instalados → mostrar: `/myskills install <package>`
-MCPs faltando → mostrar: `claude mcp add ...` ou `TWENTYFIRST_API_KEY` env var
-Standalone faltando → mostrar: `/<package>-setup`
+Packages não instalados → mostrar sequência exata:
+  1. `/plugin install <package>@myskills`
+  2. `/reload-plugins`  ← obrigatório antes do próximo passo
+  3. `/<package>:setup`
+MCPs faltando → mostrar: `claude mcp add ...` ou env var necessária
+Standalone não rodado → mostrar: `/<package>:setup` (só funciona após reload)
 
 ---
 
@@ -83,13 +86,16 @@ Argumento: `install <package>` onde package é design | copy | marketing | progr
 1. Confirmar que o marketplace está registrado:
    - Se não: `claude plugin marketplace add FelipeOFF/my-claude-code-skills`
    
-2. Instalar o package:
-   - Orientar o usuário a rodar: `/plugin install <package>@myskills`
-   - Explicar que isso instala as dependências de plugins automaticamente.
+2. Instalar o package e recarregar:
+   ```
+   /plugin install <package>@myskills
+   /reload-plugins
+   ```
+   ⚠️ O `/reload-plugins` é OBRIGATÓRIO — sem ele, o `/<package>:setup` não aparece.
 
 3. Rodar o setup standalone:
-   - Verificar se existe `~/.claude/commands/<package>-setup.md`
-   - Se sim, orientar: `/<package>-setup` para instalar as skills 3rd-party.
+   - Só após o reload o comando fica disponível: `/<package>:setup`
+   - Exemplo: `/plugin install design@myskills` → `/reload-plugins` → `/design:setup`.
 
 4. Checar MCPs necessários (ler README do package):
    - Mostrar variáveis de env necessárias e como configurar.
