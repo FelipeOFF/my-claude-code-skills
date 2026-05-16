@@ -40,5 +40,6 @@ npx skills add github:openclaw/openclaw --skill 1password
 ---
 
 > Os demais workflow tools (superpowers, claude-mem, octo, codex,
-> ralph-specum, sleepwell, agentmemory) vêm como **plugin deps**
-> automáticas — não precisa rodar nada além de `/plugin install workflow@myskills`.
+> ralph-specum, sleepwell, ruflo-core, ruflo-rag-memory, ruflo-agentdb,
+> ruflo-rvf) vêm como **plugin deps** automáticas — não precisa rodar
+> nada além de `/plugin install workflow@myskills`.

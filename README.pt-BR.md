@@ -31,7 +31,7 @@ packages temáticos instaláveis individualmente.
 | `copy` | Copywriting, headlines, escrita persuasiva | _scaffold (sem skills curadas ainda)_ | [→ copy/README.md](plugins/copy/README.md) |
 | `marketing` | SEO, CRO, tráfego pago, email, social | SEO audit (ECC), TopRank | [→ marketing/README.md](plugins/marketing/README.md) |
 | `programming` | Backend, frontend web/mobile, testing, debugging, infra | ECC patterns (api-design, postgres, e2e), Stripe, Firebase, Agent SDK, Rust LSP, MCPs (chrome-devtools, react-grab, hostinger), bundle de TDD | [→ programming/README.md](plugins/programming/README.md) |
-| `workflow` | Planning, memória, multi-phase, autonomous loops, multi-agent | superpowers, claude-mem, agentmemory, octo, codex, ralph-specum, sleepwell, bundle GSD (64 skills), find-skills, 1password | [→ workflow/README.md](plugins/workflow/README.md) |
+| `workflow` | Planning, memória, multi-phase, autonomous loops, multi-agent | superpowers, claude-mem, ruflo (core, rag-memory, agentdb, rvf), octo, codex, ralph-specum, sleepwell, bundle GSD (64 skills), find-skills, 1password | [→ workflow/README.md](plugins/workflow/README.md) |
 
 ## Por que essas skills?
 
@@ -40,7 +40,7 @@ Toda skill listada aqui foi selecionada porque o autor de fato usa em
 projetos reais. As razões se agrupam em:
 
 - **Override de defaults do LLM**: design-taste skills, frontend-patterns, code-reviewer — LLMs caem em outputs genéricos; essas skills injetam regras opinativas.
-- **Memória cross-sessão**: claude-mem, agentmemory — projetos longos perdem contexto sem memória persistente.
+- **Memória cross-sessão**: claude-mem, ruflo (rag-memory, agentdb, rvf) — projetos longos perdem contexto sem memória persistente.
 - **Planejamento multi-fase**: GSD, ralph-specum, superpowers — features que duram dias precisam de estrutura (PLAN.md, REVIEW.md, milestones).
 - **Integrações MCP**: chrome-devtools, hostinger, magic — ferramentas que o autor usa todo dia ficam auto-configuradas (env vars continuam pessoais).
 - **Patterns de stack**: Anthropic SDK, Postgres, REST design — opiniões formadas, não boilerplate genérico.

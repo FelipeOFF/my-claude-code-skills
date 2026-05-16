@@ -1,6 +1,6 @@
 {
   "name": "workflow",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Meta-workflow: planning, memory, multi-phase, autonomous loops",
   "author": {
     "name": "Felipe Oliveira",
@@ -9,10 +9,13 @@
   "dependencies": [
     { "name": "superpowers", "marketplace": "superpowers-marketplace" },
     { "name": "claude-mem", "marketplace": "thedotmack" },
-    { "name": "agentmemory", "marketplace": "agentmemory" },
     { "name": "octo", "marketplace": "nyldn-plugins" },
     { "name": "codex", "marketplace": "openai-codex" },
     { "name": "ralph-specum", "marketplace": "smart-ralph" },
-    { "name": "sleepwell", "marketplace": "sleepwell" }
+    { "name": "sleepwell", "marketplace": "sleepwell" },
+    { "name": "ruflo-core", "marketplace": "ruflo" },
+    { "name": "ruflo-rag-memory", "marketplace": "ruflo" },
+    { "name": "ruflo-agentdb", "marketplace": "ruflo" },
+    { "name": "ruflo-rvf", "marketplace": "ruflo" }
   ]
 }

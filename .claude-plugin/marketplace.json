@@ -8,14 +8,14 @@
   "allowCrossMarketplaceDependenciesOn": [
     "superpowers-marketplace",
     "claude-plugins-official",
-    "agentmemory",
     "sleepwell",
     "nyldn-plugins",
     "smart-ralph",
     "thedotmack",
     "openai-codex",
     "firebase",
-    "nowork-studio"
+    "nowork-studio",
+    "ruflo"
   ],
   "plugins": [
     {
@@ -46,7 +46,7 @@
       "name": "workflow",
       "source": "./plugins/workflow",
       "description": "Meta-workflow: planning, memory, multi-phase, autonomous loops",
-      "version": "0.1.0"
+      "version": "0.2.0"
     }
   ]
 }
