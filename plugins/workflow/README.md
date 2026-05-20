@@ -19,10 +19,6 @@ multi-session debugging, multi-agent orchestration.
 | `codex` @ `openai-codex` | Runtime contract for delegating investigation/fixes to the Codex CLI when a second model perspective is needed. |
 | `ralph-specum` @ `smart-ralph` | Spec workflow (research → requirements → design → tasks → implement) — pipeline for features with high ambiguity. |
 | `sleepwell` @ `sleepwell` | Autonomous overnight loop with discipline (isolated branch, atomic commit per iter, automatic rollback) + voice matching + meta-learning. |
-| `ruflo-core` @ `ruflo` | Agent orchestration core: coder/researcher/reviewer specialists, swarm coordination primitives. Replaces `agentmemory` as the memory/orchestration layer. |
-| `ruflo-rag-memory` @ `ruflo` | SOTA RAG memory: hybrid sparse+dense search, Graph RAG multi-hop retrieval, MMR diversity reranking, smart consolidation — the long-context memory replacement. |
-| `ruflo-agentdb` @ `ruflo` | AgentDB/RuVector persistence: memory ops, HNSW indexing, RaBitQ quantization, semantic search across the controller bridge. |
-| `ruflo-rvf` @ `ruflo` | Session persistence: state management, memory transfer, cross-conversation continuity — `recall`/`remember`/`forget` equivalent for long projects. |
 
 ## MCP servers (auto-configured)
 
@@ -85,12 +81,7 @@ TDD, debugging), `claude-mem` (memória cross-session que sobrevive a
 compactação), `octo` (orchestration multi-persona/multi-provider),
 `codex` (delegação ao Codex CLI), `ralph-specum` (research →
 requirements → design → tasks → implement) e `sleepwell` (loop autônomo
-overnight com rollback automático e meta-learning). A camada de memória
-e orquestração de agentes vem do ecossistema `ruflo` (ruvnet/ruflo):
-`ruflo-core` (orquestração de swarm), `ruflo-rag-memory` (RAG SOTA
-hybrid + Graph RAG), `ruflo-agentdb` (persistência HNSW/RuVector) e
-`ruflo-rvf` (continuidade cross-conversation) — substituem o antigo
-`agentmemory`.
+overnight com rollback automático e meta-learning).
 
 Via `/workflow-setup`: o bundle GSD da glittercowboy traz 64 skills
 `gsd-*` que formam o sistema principal de planejamento do autor
