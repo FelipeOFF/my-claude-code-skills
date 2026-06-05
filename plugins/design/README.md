@@ -22,16 +22,27 @@ Curated skills for visual design, UI/UX, design systems, and taste.
 > Personal credentials live in your env vars — never committed here.
 > Set `TWENTYFIRST_API_KEY` in your shell rc before using.
 
-## Standalone setup (run `/design-setup`)
+## Vendored skills (real content in the repo)
 
-| Skill / Bundle | Source | Why it's curated |
+Available immediately after `/plugin install design@myskills` — no setup step.
+
+| Skill | Source | Why it's curated |
 |---|---|---|
-| `frontend-project-style` | [FelipeOFF/frontend-project-style-skill](https://github.com/FelipeOFF/frontend-project-style-skill) | Auto-generates `PROJECT_STYLE.md` with design tokens on first use; per-project style guide that the LLM actually reads. |
+| `stitch-design`, `stitch-loop`, `taste-design`, `design-md`, `enhance-prompt`, `react-components`, `remotion`, `shadcn-ui` | [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) (`vendored`) | Google Stitch toolkit: hi-fi screen generation, semantic `DESIGN.md`, iterative loop, prompt enhancement, React/Remotion/shadcn builders. |
+| `huashu-design` | [alchaincyf/huashu-design](https://github.com/alchaincyf/huashu-design) (`vendored`) | HTML hi-fi prototypes, animations, design variant exploration with Junior Designer workflow + anti-AI-slop checklist. Ships its `references/` + `scripts/` (heavy BGM/showcase media omitted — see `assets/OMITTED-MEDIA.md`). |
+| `frontend-project-style` | [FelipeOFF/frontend-project-style-skill](https://github.com/FelipeOFF/frontend-project-style-skill) (`vendored`) | Auto-generates `PROJECT_STYLE.md` with design tokens on first use; per-project style guide that the LLM actually reads. |
+
+## Optional external setup (run `/design-setup`)
+
+Skills that can't be vendored (FelipeOFF repo + npm global binary):
+
+| Skill | Source | Why it's curated |
+|---|---|---|
 | `design-advisor` | [FelipeOFF/design-advisor-skill](https://github.com/FelipeOFF/design-advisor-skill) | 550+ industry-specific UX rules, 50 color palettes, 30+ font pairings; structured advice instead of vibes. |
-| `stitch-design`, `stitch-loop`, `taste-design`, `design-md`, `enhance-prompt` | [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) | Google Stitch toolkit for hi-fi screen generation, semantic `DESIGN.md`, iterative loop, and prompt enhancement. |
-| `huashu-design` | [alchaincyf/huashu-design](https://github.com/alchaincyf/huashu-design) | HTML hi-fi prototypes, interactive demos, animations, design variant exploration with Junior Designer workflow + anti-AI-slop checklist. |
-| `design-an-interface` | [mattpocock/skills](https://github.com/mattpocock/skills) | Generates multiple radically different interface designs in parallel via sub-agents — explore the design space instead of converging too early. |
 | `ui-ux-pro-max` | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) (`uipro-cli`) | 67 UI styles, 96 palettes, 161 industry-specific reasoning rules, 13 stacks; lookup-driven design intelligence. |
+
+> `design-an-interface` (mattpocock) stays available on demand but isn't
+> vendored — `npx skills add git@github.com:mattpocock/skills.git -y`.
 
 ## Local-only skills (no public source mapped)
 
@@ -54,7 +65,7 @@ specific LLM default:
 ```bash
 /plugin marketplace add FelipeOFF/my-claude-code-skills
 /plugin install design@myskills
-/design-setup   # optional — installs 3rd-party standalone bundles
+/design-setup   # optional — installs only design-advisor + ui-ux-pro-max (external)
 ```
 
 ## How to remove
@@ -71,18 +82,20 @@ specific LLM default:
 ## 🇧🇷 Resumo em PT-BR
 
 Package `design` = curadoria de UI/UX para fugir dos defaults genéricos
-de LLM. Inclui o plugin `frontend-design` (cross-marketplace, auto-instalado),
-o MCP da 21st.dev Magic (gera React components — precisa de
-`TWENTYFIRST_API_KEY` pessoal), e o bundle Stitch da Google Labs com
-ferramentas de prototipação hi-fi (`stitch-design`, `taste-design`,
-`design-md`, `enhance-prompt`, `stitch-loop`).
+de LLM. Inclui o plugin `frontend-design` (cross-marketplace, auto-instalado)
+e o MCP da 21st.dev Magic (gera React components — precisa de
+`TWENTYFIRST_API_KEY` pessoal).
 
-Soma também as duas autorais do Felipe (`frontend-project-style` e
-`design-advisor`), o `huashu-design` (protótipos HTML com workflow
-anti-AI-slop) e o `design-an-interface` da Matt Pocock (gera N
-designs paralelos pra explorar antes de convergir). O `ui-ux-pro-max`
-entra como design intelligence baseada em lookup (67 estilos, 96
-paletas, regras industry-specific).
+**Vendorizadas** (conteúdo real no repo, prontas no install): o bundle
+Stitch da Google Labs (`stitch-design`, `stitch-loop`, `taste-design`,
+`design-md`, `enhance-prompt`, `react-components`, `remotion`, `shadcn-ui`),
+o `huashu-design` (protótipos HTML com workflow anti-AI-slop) e a autoral
+`frontend-project-style`.
+
+Via `/design-setup` (opcional) entram só as externas: `design-advisor`
+(550+ regras de UX, autoral do Felipe) e `ui-ux-pro-max` (design
+intelligence por lookup — 67 estilos, 96 paletas, via `uipro-cli`). O
+`design-an-interface` da Matt Pocock fica disponível sob demanda.
 
 As skills locais (sem repo público) cobrem style packs (industrial-brutalist,
 minimalist, liquid-glass), image generation (mobile + web), e regras

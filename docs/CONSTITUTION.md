@@ -76,19 +76,25 @@ Toda skill no repo (qualquer package) tem frontmatter declarando origem:
 name: minha-skill
 description: |
   Use quando ... Triggers em "X", "Y", "Z".
-source: authored                      # authored | dependency | standalone-setup
+source: authored                      # authored | vendored | dependency | standalone-setup
 upstream: null                        # null | "<plugin>@<marketplace>" | URL
 license: MIT                          # SPDX identifier (se aplicável)
 added: YYYY-MM-DD
+vendored: YYYY-MM-DD                   # só em source: vendored — data do vendoring
 ---
 ```
 
 - `source: authored` → conteúdo no repo, autoria do Felipe.
+- `source: vendored` → conteúdo **real** do upstream copiado para a pasta
+  da skill (marketplace self-contained). Mantém `upstream`/`license` para
+  atribuição e `vendored: <data>` registrando quando foi sincronizado.
+  É a forma padrão de "ter a skill real em cada pasta".
 - `source: dependency` → arquivo é stub documentando que a skill real
   vem via `dependencies` cross-marketplace. O stub explica como
   instalar manualmente caso a dep falhe.
 - `source: standalone-setup` → idem stub, mas a instalação é via
-  `/<package>-setup`.
+  `/<package>-setup`. Usado só para fontes que não podem ser vendorizadas
+  (ex.: binário npm global, MCP server).
 
 ---
 
