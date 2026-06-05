@@ -1,0 +1,23 @@
+{
+  "$schema": "myskills/skill-source@1",
+  "name": "n-plus-one-guard",
+  "package": "programming",
+  "sync_direction": "push",
+  "source": {
+    "type": "github",
+    "repo": "FelipeOFF/n-plus-one-guard-skill",
+    "url": "https://github.com/FelipeOFF/n-plus-one-guard-skill.git",
+    "ref": "master",
+    "commit": "6db10591ce60f84323b183a7f15bd098364bb123",
+    "skill_path": "",
+    "skill_file": "SKILL.md",
+    "copy_mode": "root_selective"
+  },
+  "support_paths": [],
+  "frontmatter_policy": "authored_mirror",
+  "public_source_field": "authored",
+  "debrand": null,
+  "license": "MIT",
+  "vendored_at": "2026-06-05",
+  "notes": "Autoral no myskills; espelhada para o repo público."
+}

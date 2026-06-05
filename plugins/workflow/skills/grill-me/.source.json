@@ -1,0 +1,22 @@
+{
+  "$schema": "myskills/skill-source@1",
+  "name": "grill-me",
+  "package": "workflow",
+  "sync_direction": "pull",
+  "source": {
+    "type": "github",
+    "repo": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills.git",
+    "ref": "main",
+    "commit": "aaf2453fbdfe7a15c07f11d861224f34ab4b53cb",
+    "skill_path": "skills/productivity/grill-me",
+    "skill_file": "SKILL.md",
+    "copy_mode": "skill_dir"
+  },
+  "support_paths": "all_siblings",
+  "frontmatter_policy": "curated",
+  "public_source_field": "vendored",
+  "debrand": null,
+  "license": "MIT",
+  "vendored_at": "2026-06-05"
+}

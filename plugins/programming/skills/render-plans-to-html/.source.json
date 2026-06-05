@@ -1,0 +1,23 @@
+{
+  "$schema": "myskills/skill-source@1",
+  "name": "render-plans-to-html",
+  "package": "programming",
+  "sync_direction": "pull",
+  "source": {
+    "type": "github",
+    "repo": "FelipeOFF/render-plans-to-html",
+    "url": "https://github.com/FelipeOFF/render-plans-to-html.git",
+    "ref": "main",
+    "commit": "7d36061308e56fc951b49df699fe7da623dbdf39",
+    "skill_path": "skill",
+    "skill_file": "SKILL.md",
+    "copy_mode": "skill_dir"
+  },
+  "support_paths": "all_siblings",
+  "frontmatter_policy": "curated",
+  "public_source_field": "vendored",
+  "debrand": null,
+  "license": "MIT",
+  "vendored_at": "2026-06-05",
+  "notes": "Skill em subdir 'skill/' do repo npm."
+}

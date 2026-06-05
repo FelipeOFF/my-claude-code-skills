@@ -96,6 +96,23 @@ vendored: YYYY-MM-DD                   # só em source: vendored — data do ven
   `/<package>-setup`. Usado só para fontes que não podem ser vendorizadas
   (ex.: binário npm global, MCP server).
 
+### Dotfile de proveniência `.source.json`
+
+Toda skill **vendorizada** (ou autoral espelhada num repo público) carrega um
+`plugins/<pkg>/skills/<nome>/.source.json` — dotfile oculto, versionado e
+machine-readable — que registra **exatamente de onde o conteúdo veio**, mesmo
+quando o `SKILL.md` público é de-brandado (ex.: stack patterns sem a marca do
+bundle de origem). Campos: `source` (repo/url/ref/commit/skill_path/copy_mode),
+`support_paths`, `frontmatter_policy`, `debrand`, `public_source_field`,
+`sync_direction` (`pull` = atualiza do upstream; `push` = espelha pro repo
+público), `license`, `vendored_at`.
+
+Isso torna o repo um **agregado de skills reais com proveniência rastreável**:
+o comando `/myskills update` (engine `scripts/sync-skills.py`) lê todos os
+dotfiles e atualiza/empurra as skills automaticamente, sem trabalho manual do
+lado do usuário. Adicionar uma skill vendorizada nova ⇒ criar o `.source.json`
+dela.
+
 ---
 
 ## Regra D — README de package padronizado

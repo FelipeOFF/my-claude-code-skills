@@ -1,0 +1,22 @@
+{
+  "$schema": "myskills/skill-source@1",
+  "name": "find-skills",
+  "package": "workflow",
+  "sync_direction": "pull",
+  "source": {
+    "type": "github",
+    "repo": "vercel-labs/skills",
+    "url": "https://github.com/vercel-labs/skills.git",
+    "ref": "main",
+    "commit": "87dc3636c59d38d7336a1d857f1364699bf38038",
+    "skill_path": "skills/find-skills",
+    "skill_file": "SKILL.md",
+    "copy_mode": "skill_dir"
+  },
+  "support_paths": "all_siblings",
+  "frontmatter_policy": "curated",
+  "public_source_field": "vendored",
+  "debrand": null,
+  "license": "MIT",
+  "vendored_at": "2026-06-05"
+}
