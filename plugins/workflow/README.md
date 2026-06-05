@@ -25,12 +25,23 @@ multi-session debugging, multi-agent orchestration.
 _None directly. The plugin deps above each declare their own MCPs
 when needed (e.g., `claude-mem` brings `mcp-search`)._
 
+## Vendored skills (real content in the repo)
+
+Available immediately after `/plugin install workflow@myskills` — no setup step.
+
+| Skill | Source | Why it's curated |
+|---|---|---|
+| `caveman`, `diagnose`, `grill-me`, `grill-with-docs`, `handoff`, `improve-codebase-architecture`, `prototype`, `to-issues`, `to-prd`, `triage`, `write-a-skill`, `zoom-out` | [mattpocock/skills](https://github.com/mattpocock/skills) (`vendored`) | Lean workflow toolkit: terse comms (`caveman`), diagnose/grill loops, ADR + handoff docs, architecture deepening, throwaway prototyping, issue/PRD generation, triage, skill authoring, and zoom-out for higher-level maps. |
+| `find-skills` | [vercel-labs/skills](https://github.com/vercel-labs/skills/tree/main/skills/find-skills) (`vendored`) | Discovery and install of new skills via `npx skills find/add` — meta-tool for extending the toolkit on demand. |
+| `llm-wiki` | authored | Karpathy-style LLM wiki pattern — structured, navigable knowledge capture for a codebase/domain. |
+
 ## Standalone setup (auto)
+
+Installed on first session via `SessionStart` bootstrap (or `/workflow-setup`):
 
 | Skill / Bundle | Source | Why it's curated |
 |---|---|---|
 | GSD — Get Shit Done | [glittercowboy/get-shit-done](https://github.com/glittercowboy/get-shit-done) | 64-skill `gsd-*` family covering project lifecycle: roadmap, phase planning, execution, verification, milestones, workstreams, debug, code-review, docs-update. The author's primary planning system. |
-| `find-skills` | [vercel-labs/skills](https://github.com/vercel-labs/skills/tree/main/skills/find-skills) | Discovery and install of new skills via `npx skills find/add` — meta-tool for extending the toolkit on demand. |
 | `1password` | [openclaw/openclaw](https://github.com/openclaw/openclaw/tree/main/skills/1password) | 1Password CLI (`op`) usage: install, signin, read/inject/run secrets — secrets management without leaking to logs. |
 
 ## How to install
@@ -40,9 +51,10 @@ when needed (e.g., `claude-mem` brings `mcp-search`)._
 /plugin install workflow@myskills
 ```
 
-Standalones (GSD, find-skills, 1password) são instaladas automaticamente
+Standalones (GSD, 1password) são instaladas automaticamente
 na primeira sessão pós-install via hook `SessionStart` + `scripts/bootstrap.sh`.
 Marker em `${CLAUDE_PLUGIN_DATA}/.bootstrapped-v<version>` garante idempotência.
+(`find-skills` agora é vendorizada — já vem no repo.)
 
 ### Re-instalação / fallback
 
@@ -83,10 +95,15 @@ compactação), `octo` (orchestration multi-persona/multi-provider),
 requirements → design → tasks → implement) e `sleepwell` (loop autônomo
 overnight com rollback automático e meta-learning).
 
+**Vendorizadas** (conteúdo real no repo): o bundle de workflow da Matt
+Pocock (`caveman`, `diagnose`, `grill-me`, `grill-with-docs`, `handoff`,
+`improve-codebase-architecture`, `prototype`, `to-issues`, `to-prd`,
+`triage`, `write-a-skill`, `zoom-out`), o `find-skills` (descoberta de
+skills via `npx skills`) e a autoral `llm-wiki`.
+
 Via `/workflow-setup`: o bundle GSD da glittercowboy traz 64 skills
 `gsd-*` que formam o sistema principal de planejamento do autor
-(roadmap, fases, execução, verificação, milestones, workstreams).
-Mais `find-skills` (descoberta de skills via `npx skills`) e
+(roadmap, fases, execução, verificação, milestones, workstreams) e
 `1password` (gerenciamento de secrets via CLI `op`, sem vazar pra logs).
 
 Conjunto desenhado pra sustentar features que duram dias/semanas sem

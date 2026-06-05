@@ -17,6 +17,7 @@ Se vazio ou "status" → executar **FLUXO STATUS**.
 Se começa com "install" → executar **FLUXO INSTALL**.
 Se começa com "add" → executar **FLUXO ADD**.
 Se começa com "sync" → executar **FLUXO SYNC**.
+Se começa com "update" → executar **FLUXO UPDATE** (atualiza skills vendorizadas a partir dos upstreams via `.source.json`).
 
 ---
 
@@ -210,6 +211,49 @@ gh pr create --title "chore: Auto-sync skills $(date +%Y-%m-%d)" --body "..."
 ### Passo 5 — Mostrar resumo
 
 Listar o que mudou e retornar URL do PR criado.
+
+---
+
+## FLUXO UPDATE
+
+Atualiza as skills **vendorizadas** (conteúdo real no repo) a partir dos seus
+upstreams, sem o usuário precisar fazer nada do lado dele. A proveniência de
+cada skill mora num dotfile `plugins/<pkg>/skills/<nome>/.source.json` (repo,
+ref, commit, path, modo de cópia, debrand, direção). O engine é
+`scripts/sync-skills.py`.
+
+### Passo 1 — Inventário / dry-run
+
+```bash
+cd ~/Projects/my-claude-code-skills
+python3 scripts/sync-skills.py status        # lista proveniência de cada skill
+python3 scripts/sync-skills.py check          # dry-run: mostra o que mudaria (não aplica)
+```
+
+Filtros opcionais: `--skill <nome>` ou `--package <design|programming|workflow>`.
+
+### Passo 2 — Aplicar
+
+```bash
+# Re-vendoriza dos upstreams (direção pull). Preserva o frontmatter curado do
+# myskills; só corpo + arquivos de suporte são atualizados. Debrand aplicado
+# nas skills marcadas (ex.: stack patterns sem marca de bundle).
+python3 scripts/sync-skills.py pull --apply
+
+# Espelha as skills autorais do myskills para seus repos públicos (direção push).
+python3 scripts/sync-skills.py push --apply
+```
+
+### Passo 3 — Revisar e commitar
+
+Após `pull --apply`, revisar o diff (`git diff`), rodar
+`claude plugin validate .` e commitar no padrão Felipe. Após `push --apply`,
+os repos públicos (ex.: guardrails) já recebem o commit automaticamente.
+
+> **Direções:** `pull` = conteúdo vem do upstream → atualiza a pasta da skill.
+> `push` = skill autoral do myskills → espelha pro repo público.
+> Tudo dirigido pelos `.source.json`; adicionar uma skill nova = adicionar o
+> dotfile dela.
 
 ---
 

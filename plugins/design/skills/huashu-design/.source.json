@@ -1,0 +1,31 @@
+{
+  "$schema": "myskills/skill-source@1",
+  "name": "huashu-design",
+  "package": "design",
+  "sync_direction": "pull",
+  "source": {
+    "type": "github",
+    "repo": "alchaincyf/huashu-design",
+    "url": "https://github.com/alchaincyf/huashu-design.git",
+    "ref": "master",
+    "commit": "90be99260b7d89f9452102b0152803ac2998ddd1",
+    "skill_path": "",
+    "skill_file": "SKILL.md",
+    "copy_mode": "root_selective",
+    "exclude": [
+      "*.mp3",
+      "showcases"
+    ]
+  },
+  "support_paths": [
+    "references",
+    "scripts",
+    "assets"
+  ],
+  "frontmatter_policy": "curated",
+  "public_source_field": "vendored",
+  "debrand": null,
+  "license": "MIT",
+  "vendored_at": "2026-06-05",
+  "notes": "Root-repo. Mídia pesada omitida no vendoring: assets/*.mp3 e assets/showcases (ver assets/OMITTED-MEDIA.md)."
+}

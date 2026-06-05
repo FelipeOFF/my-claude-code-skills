@@ -1,0 +1,23 @@
+{
+  "$schema": "myskills/skill-source@1",
+  "name": "race-condition-guard",
+  "package": "programming",
+  "sync_direction": "push",
+  "source": {
+    "type": "github",
+    "repo": "FelipeOFF/race-condition-guard-skill",
+    "url": "https://github.com/FelipeOFF/race-condition-guard-skill.git",
+    "ref": "master",
+    "commit": "cdc1a1c64ab4fe50134d3340e45622e8bd21a62b",
+    "skill_path": "",
+    "skill_file": "SKILL.md",
+    "copy_mode": "root_selective"
+  },
+  "support_paths": [],
+  "frontmatter_policy": "authored_mirror",
+  "public_source_field": "authored",
+  "debrand": null,
+  "license": "MIT",
+  "vendored_at": "2026-06-05",
+  "notes": "Autoral no myskills; espelhada para o repo público."
+}

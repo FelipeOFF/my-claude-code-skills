@@ -1,17 +1,35 @@
 {
   "name": "workflow",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Meta-workflow: planning, memory, multi-phase, autonomous loops",
   "author": {
     "name": "Felipe Oliveira",
     "url": "https://github.com/FelipeOFF"
   },
   "dependencies": [
-    { "name": "superpowers", "marketplace": "superpowers-marketplace" },
-    { "name": "claude-mem", "marketplace": "thedotmack" },
-    { "name": "octo", "marketplace": "nyldn-plugins" },
-    { "name": "codex", "marketplace": "openai-codex" },
-    { "name": "ralph-specum", "marketplace": "smart-ralph" },
-    { "name": "sleepwell", "marketplace": "sleepwell" }
+    {
+      "name": "superpowers",
+      "marketplace": "superpowers-marketplace"
+    },
+    {
+      "name": "claude-mem",
+      "marketplace": "thedotmack"
+    },
+    {
+      "name": "octo",
+      "marketplace": "nyldn-plugins"
+    },
+    {
+      "name": "codex",
+      "marketplace": "openai-codex"
+    },
+    {
+      "name": "ralph-specum",
+      "marketplace": "smart-ralph"
+    },
+    {
+      "name": "sleepwell",
+      "marketplace": "sleepwell"
+    }
   ]
 }

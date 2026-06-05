@@ -1,0 +1,32 @@
+{
+  "$schema": "myskills/skill-source@1",
+  "name": "backend-patterns",
+  "package": "programming",
+  "sync_direction": "pull",
+  "source": {
+    "type": "github",
+    "repo": "affaan-m/everything-claude-code",
+    "url": "https://github.com/affaan-m/everything-claude-code.git",
+    "ref": "main",
+    "commit": "bc8e12bb80c904a5a9864797ef1fd1212aa82f3d",
+    "skill_path": "skills/backend-patterns",
+    "skill_file": "SKILL.md",
+    "copy_mode": "skill_dir"
+  },
+  "support_paths": "all_siblings",
+  "frontmatter_policy": "curated",
+  "public_source_field": "authored",
+  "debrand": {
+    "enabled": true,
+    "patterns": [
+      "everything-claude-code",
+      "ECC",
+      "affaan-m",
+      "affaan",
+      "origin: ECC"
+    ],
+    "reason": "Skill mantida no marketplace sem a marca do bundle de origem (decisão de curadoria)."
+  },
+  "license": "MIT",
+  "vendored_at": "2026-06-05"
+}

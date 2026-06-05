@@ -12,6 +12,9 @@ description: Instala skills standalone do package workflow (3rd-party fora de ma
 
 Execute via Bash. Confirme com `/find-skills gsd` ao final.
 
+> `find-skills` (Vercel Labs) agora é **vendorizada** (conteúdo real no repo) —
+> não precisa mais ser instalada aqui.
+
 ## 1. GSD — Get Shit Done (bundle de 64 skills de gerenciamento de fases)
 
 ```bash
@@ -21,15 +24,7 @@ npx skills add git@github.com:glittercowboy/get-shit-done.git -y
 Inclui toda a família `gsd-*` (planejamento, execução, verificação, debug,
 review, milestones, workstreams, etc.).
 
-## 2. find-skills (Vercel Labs)
-
-Skill que ensina como descobrir e instalar outras skills via `npx skills find/add`.
-
-```bash
-npx skills add github:vercel-labs/skills --skill find-skills
-```
-
-## 3. 1password (OpenClaw)
+## 2. 1password (OpenClaw)
 
 Set up e uso do 1Password CLI (`op`) — install, signin, ler/injetar/run secrets.
 

@@ -1,19 +1,16 @@
 ---
 name: marketing-setup
-description: Instala skills standalone do package marketing (3rd-party fora de marketplaces)
+description: Setup externo do package marketing (atualmente sem instalações)
 ---
 
 # /marketing-setup
 
-## 1. SEO (do repo ECC, skill específica)
-
-Instalação seletiva — pega só a skill `seo`, não o bundle inteiro.
-
-```bash
-npx skills add github:affaan-m/everything-claude-code --skill seo
-```
+Nenhum setup externo necessário no momento. O package `marketing` traz apenas a
+dependency cross-marketplace `toprank @ nowork-studio`, auto-instalada no
+`/plugin install marketing@myskills`.
 
 ---
 
-> Skills de paid ads, cold email e CRO podem ser adicionadas conforme
+> A skill `seo` (do bundle `everything-claude-code`) foi **removida** da
+> curadoria. CRO, paid ads, cold email e social podem ser adicionados conforme
 > a curadoria crescer.

@@ -1,12 +1,15 @@
 {
   "name": "marketing",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Curadoria de skills de marketing digital, SEO, CRO e tráfego",
   "author": {
     "name": "Felipe Oliveira",
     "url": "https://github.com/FelipeOFF"
   },
   "dependencies": [
-    { "name": "toprank", "marketplace": "nowork-studio" }
+    {
+      "name": "toprank",
+      "marketplace": "nowork-studio"
+    }
   ]
 }

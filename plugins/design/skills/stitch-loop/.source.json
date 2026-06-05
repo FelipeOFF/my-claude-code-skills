@@ -1,0 +1,22 @@
+{
+  "$schema": "myskills/skill-source@1",
+  "name": "stitch-loop",
+  "package": "design",
+  "sync_direction": "pull",
+  "source": {
+    "type": "github",
+    "repo": "google-labs-code/stitch-skills",
+    "url": "https://github.com/google-labs-code/stitch-skills.git",
+    "ref": "main",
+    "commit": "1544aa4a3be93e7515b0c27d32722f7ca5a2f691",
+    "skill_path": "plugins/stitch-utilities/skills/stitch-loop",
+    "skill_file": "SKILL.md",
+    "copy_mode": "skill_dir"
+  },
+  "support_paths": "all_siblings",
+  "frontmatter_policy": "curated",
+  "public_source_field": "vendored",
+  "debrand": null,
+  "license": "MIT",
+  "vendored_at": "2026-06-05"
+}

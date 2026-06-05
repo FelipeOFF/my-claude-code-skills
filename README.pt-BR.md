@@ -23,14 +23,46 @@ packages temáticos instaláveis individualmente.
 /plugin install workflow@myskills
 ```
 
+## Requisitos
+
+O marketplace é **self-contained**: as skills são vendorizadas (o conteúdo
+real mora em cada pasta de skill), então após o `/plugin install` elas já
+ficam disponíveis — sem passo de download por skill. Algumas skills chamam
+runtimes locais, então para usar **tudo** você precisa de:
+
+| Runtime | Versão | Usado por |
+|---|---|---|
+| **Python** | **3.12** (testado em 3.12.1; 3.10+ funciona) | MCP `code-review-graph` e os harnesses `pytest`/`hypothesis` das skills `n-plus-one-guard` e `race-condition-guard` |
+| **Node.js** | 18+ | skills que rodam via `npx` (`render-plans-to-html`, `find-skills`, `ui-ux-pro-max`) e os MCP servers auto-configurados |
+| **git** + **gh** | recente | clonar fontes standalone e o workflow de PR/branch do autor |
+
+> Recomendado: gerenciar Python com `asdf`/`pyenv` e pinar `3.12.1`. O MCP
+> `code-review-graph` espera um caminho de interpretador estável — ver
+> [programming/README.md](plugins/programming/README.md) para o ajuste do `.mcp.json`.
+
+## Como usar
+
+1. **Adicione o marketplace uma vez** e **instale só o(s) package(s)** do
+   trabalho atual (acima) — carregar todas as skills toda sessão queima tokens.
+2. **Skills vendorizadas já vêm prontas.** As instruções completas ficam em
+   `plugins/<pkg>/skills/<skill>/SKILL.md`; o Claude carrega sob demanda quando
+   a tarefa casa com a `description` da skill. Não há passo de setup.
+3. **Setup externo opcional.** Poucas skills não dá pra vendorizar (binário
+   npm global, MCP server, bundle 3rd-party grande). Cada package expõe um
+   comando `/<package>-setup` que instala só essas — é opcional e está listado
+   no README do package.
+4. **Deps e MCPs auto-configuram.** Plugin deps cross-marketplace e MCP servers
+   declarados em cada `plugin.json` instalam/configuram sozinhos; credenciais
+   pessoais ficam em env vars (nunca commitadas).
+
 ## Packages
 
 | Package | Escopo | O que tem dentro | Detalhes |
 |---|---|---|---|
 | `design` | UI/UX, design system, taste, mockups | Stitch (Google Labs), Huashu, plugin frontend-design, image generation, style packs, MCP Magic da 21st.dev | [→ design/README.md](plugins/design/README.md) |
 | `copy` | Copywriting, headlines, escrita persuasiva | _scaffold (sem skills curadas ainda)_ | [→ copy/README.md](plugins/copy/README.md) |
-| `marketing` | SEO, CRO, tráfego pago, email, social | SEO audit (ECC), TopRank | [→ marketing/README.md](plugins/marketing/README.md) |
-| `programming` | Backend, frontend web/mobile, testing, debugging, infra | ECC patterns (api-design, postgres, e2e), Stripe, Firebase, Agent SDK, Rust LSP, MCPs (chrome-devtools, react-grab, hostinger), bundle de TDD | [→ programming/README.md](plugins/programming/README.md) |
+| `marketing` | SEO, CRO, tráfego pago, email, social | TopRank (SEO) | [→ marketing/README.md](plugins/marketing/README.md) |
+| `programming` | Backend, frontend web/mobile, testing, debugging, infra | Stack patterns (api-design, backend/frontend-patterns, postgres-patterns, e2e-testing), skills vendorizadas (tdd, obscura, render-plans-to-html), guardrails (n-plus-one-guard, race-condition-guard), MCP code-review-graph, Stripe, Firebase, Agent SDK, Rust LSP, MCPs (chrome-devtools, react-grab, hostinger) | [→ programming/README.md](plugins/programming/README.md) |
 | `workflow` | Planning, memória, multi-phase, autonomous loops, multi-agent | superpowers, claude-mem, octo, codex, ralph-specum, sleepwell, bundle GSD (64 skills), find-skills, 1password | [→ workflow/README.md](plugins/workflow/README.md) |
 
 ## Por que essas skills?
@@ -57,7 +89,7 @@ Resumo:
 
 - **Regra A — Localização única.** Uma skill, um package.
 - **Regra B — Top-level por default.** Mid-level só com >15 skills + agrupamento ≥5.
-- **Regra C — Frontmatter declara origem.** `authored | dependency | standalone-setup`.
+- **Regra C — Frontmatter declara origem.** `authored | vendored | dependency | standalone-setup`.
 - **Regra D — README de package padronizado.**
 - **Regra E — Constituição é a fonte da verdade.**
 

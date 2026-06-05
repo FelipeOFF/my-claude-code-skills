@@ -1,0 +1,23 @@
+{
+  "$schema": "myskills/skill-source@1",
+  "name": "obscura",
+  "package": "programming",
+  "sync_direction": "pull",
+  "source": {
+    "type": "github",
+    "repo": "FelipeOFF/obscura-skill",
+    "url": "https://github.com/FelipeOFF/obscura-skill.git",
+    "ref": "main",
+    "commit": "3fa09a14efe9432b9608677797a4cb2f7453863e",
+    "skill_path": "",
+    "skill_file": "SKILL.md",
+    "copy_mode": "root_selective"
+  },
+  "support_paths": [],
+  "frontmatter_policy": "curated",
+  "public_source_field": "vendored",
+  "debrand": null,
+  "license": "MIT",
+  "vendored_at": "2026-06-05",
+  "notes": "Root-repo (FelipeOFF). SKILL.md na raiz."
+}
