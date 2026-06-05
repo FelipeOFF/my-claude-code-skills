@@ -32,7 +32,7 @@ themed packages installable individually.
 | `copy` | Copywriting, headlines, persuasive writing | _scaffold (no curated skills yet)_ | [→ copy/README.md](plugins/copy/README.md) |
 | `marketing` | SEO, CRO, paid traffic, email, social | SEO audit (ECC), TopRank | [→ marketing/README.md](plugins/marketing/README.md) |
 | `programming` | Backend, frontend web/mobile, testing, debugging, infra | ECC patterns (api-design, postgres, e2e), Stripe, Firebase, Agent SDK, Rust LSP, MCPs (chrome-devtools, react-grab, hostinger), TDD bundle | [→ programming/README.md](plugins/programming/README.md) |
-| `workflow` | Planning, memory, multi-phase, autonomous loops, multi-agent | superpowers, claude-mem, ruflo (core, rag-memory, agentdb, rvf), octo, codex, ralph-specum, sleepwell, GSD bundle (64 skills), find-skills, 1password | [→ workflow/README.md](plugins/workflow/README.md) |
+| `workflow` | Planning, memory, multi-phase, autonomous loops, multi-agent | superpowers, claude-mem, octo, codex, ralph-specum, sleepwell, GSD bundle (64 skills), find-skills, 1password | [→ workflow/README.md](plugins/workflow/README.md) |
 
 ## Why these skills?
 
@@ -41,7 +41,7 @@ skill listed here was selected because the author actually uses it in
 real projects. Reasons cluster into:
 
 - **Override LLM defaults**: design-taste skills, frontend-patterns, code-reviewer — LLMs default to generic outputs; these skills inject opinionated rules.
-- **Cross-session memory**: claude-mem, ruflo (rag-memory, agentdb, rvf) — long projects lose context without persistent memory.
+- **Cross-session memory**: claude-mem — long projects lose context without persistent memory.
 - **Multi-phase planning**: GSD, ralph-specum, superpowers — features that span days need structure (PLAN.md, REVIEW.md, milestones).
 - **MCP integrations**: chrome-devtools, hostinger, magic — tools the author uses daily get auto-configured (env vars stay personal).
 - **Stack patterns**: Anthropic SDK, Postgres, REST design — opinionated patterns, not generic boilerplate.

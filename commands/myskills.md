@@ -138,7 +138,7 @@ added: YYYY-MM-DD
 ```
 
 **Se `source: dependency`** (vem via marketplace):
-- Criar stub SKILL.md igual ao `ruflo` (explicando que a real vem via dep).
+- Criar stub SKILL.md de dependency (explicando que a real vem via dep).
 - Adicionar a dep em `plugins/<pkg>/.claude-plugin/plugin.json`.
 
 **Se `source: standalone-setup`** (npx/git, via setup command):
@@ -182,7 +182,7 @@ Comparar as duas listas:
 - **Skills documentadas no repo mas não instaladas** → candidatas a remover ou marcar como `source: standalone-setup`
 - **Skills de plugins (enabledPlugins)** → já documentadas via deps, ignorar
 
-Filtrar falsos positivos: skills do GSD (`gsd-*`), superpowers, ruflo, octo, claude-mem, codex, ralph-specum, sleepwell **não entram no myskills** — são deps de plugins, não curadoria manual.
+Filtrar falsos positivos: skills do GSD (`gsd-*`), superpowers, octo, claude-mem, codex, ralph-specum, sleepwell **não entram no myskills** — são deps de plugins, não curadoria manual.
 
 ### Passo 3 — Para cada nova skill detectada
 
