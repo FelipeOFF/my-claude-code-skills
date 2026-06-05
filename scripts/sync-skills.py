@@ -208,8 +208,11 @@ def main():
         for _, m in items:
             s = m["source"]
             db = " [debrand]" if m.get("debrand") else ""
+            repo = s.get("repo") or "(autoral, sem upstream)"
+            ref = f"@{s['ref']}" if s.get("ref") else ""
+            commit = f" :{s['commit'][:7]}" if s.get("commit") else ""
             print(f"{m['name']:<{w}}  {m['sync_direction']:<4}  "
-                  f"{s['repo']}@{s['ref']} :{s['commit'][:7]}{db}")
+                  f"{repo}{ref}{commit}{db}")
         print(f"\n{len(items)} skills rastreadas")
         return 0
 
