@@ -1,0 +1,23 @@
+{
+  "$schema": "myskills/skill-source@1",
+  "name": "code-review-graph",
+  "package": "programming",
+  "sync_direction": "none",
+  "source": {
+    "type": "pip-mcp",
+    "repo": "tirth8205/code-review-graph",
+    "url": "https://github.com/tirth8205/code-review-graph.git",
+    "ref": "main",
+    "commit": null,
+    "skill_path": null,
+    "skill_file": "SKILL.md",
+    "copy_mode": "authored"
+  },
+  "support_paths": [],
+  "frontmatter_policy": "authored",
+  "public_source_field": "pip",
+  "debrand": null,
+  "license": "MIT",
+  "vendored_at": "2026-06-05",
+  "notes": "Doc autoral sobre o MCP code-review-graph (instalado via pip). Não é conteúdo clonado; sync_direction=none."
+}
