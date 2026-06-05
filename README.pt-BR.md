@@ -62,7 +62,7 @@ runtimes locais, então para usar **tudo** você precisa de:
 | `design` | UI/UX, design system, taste, mockups | Stitch (Google Labs), Huashu, plugin frontend-design, image generation, style packs, MCP Magic da 21st.dev | [→ design/README.md](plugins/design/README.md) |
 | `copy` | Copywriting, headlines, escrita persuasiva | _scaffold (sem skills curadas ainda)_ | [→ copy/README.md](plugins/copy/README.md) |
 | `marketing` | SEO, CRO, tráfego pago, email, social | TopRank (SEO) | [→ marketing/README.md](plugins/marketing/README.md) |
-| `programming` | Backend, frontend web/mobile, testing, debugging, infra | Skills vendorizadas (tdd, obscura, render-plans-to-html), guardrails (n-plus-one-guard, race-condition-guard), MCP code-review-graph, Stripe, Firebase, Agent SDK, Rust LSP, MCPs (chrome-devtools, react-grab, hostinger) | [→ programming/README.md](plugins/programming/README.md) |
+| `programming` | Backend, frontend web/mobile, testing, debugging, infra | Stack patterns (api-design, backend/frontend-patterns, postgres-patterns, e2e-testing), skills vendorizadas (tdd, obscura, render-plans-to-html), guardrails (n-plus-one-guard, race-condition-guard), MCP code-review-graph, Stripe, Firebase, Agent SDK, Rust LSP, MCPs (chrome-devtools, react-grab, hostinger) | [→ programming/README.md](plugins/programming/README.md) |
 | `workflow` | Planning, memória, multi-phase, autonomous loops, multi-agent | superpowers, claude-mem, octo, codex, ralph-specum, sleepwell, bundle GSD (64 skills), find-skills, 1password | [→ workflow/README.md](plugins/workflow/README.md) |
 
 ## Por que essas skills?

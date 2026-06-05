@@ -41,6 +41,19 @@ immediately after `/plugin install programming@myskills`, no setup step.
 | `race-condition-guard` | [FelipeOFF/race-condition-guard-skill](https://github.com/FelipeOFF/race-condition-guard-skill) (`authored`) | Validates/prevents **race conditions** in concurrent handlers (TOCTOU, lost update, double-submit): atomic updates, locks, constraints, idempotency keys + concurrency & property-based tests that prove the invariant. |
 | `code-review-graph` | [tirth8205/code-review-graph](https://github.com/tirth8205/code-review-graph) (`pip` MCP) | Semantic codebase knowledge graph via MCP — architecture map + blast-radius impact analysis with ~8× fewer tokens. Needs Python (see below). |
 
+## Stack pattern skills (authored)
+
+Opinionated stack patterns, content in the repo (`source: authored`) — ready
+on install, no setup step.
+
+| Skill | Scope |
+|---|---|
+| `api-design` | REST design at production scale: resource naming, status codes, pagination, filtering, error responses, versioning, rate limiting. |
+| `backend-patterns` | Backend architecture for Node.js/Express/Next.js API routes — service layers, error handling, validation, async patterns. |
+| `frontend-patterns` | React/Next idioms: state management, hooks, performance (memoization, code splitting), client/server boundary. |
+| `postgres-patterns` | PostgreSQL query optimization, schema design, indexing strategy, security (RLS, roles). |
+| `e2e-testing` | Playwright E2E: Page Object Model, config, CI/CD integration, artifact handling (screenshots/videos/traces), flaky-test strategies. |
+
 ## Optional external setup (run `/programming-setup`)
 
 Only skills that can't be vendored (external bundle):
@@ -108,8 +121,12 @@ dashboard HTML), e as duas autorais de guardrail — `n-plus-one-guard`
 (trava N+1 de queries/chamadas por request com teto por endpoint) e
 `race-condition-guard` (valida/previne race conditions com locks,
 idempotência e testes de concorrência). O `code-review-graph` é um MCP
-em Python (grafo semântico + blast-radius). O bundle ECC
-(`everything-claude-code`) foi removido da curadoria.
+em Python (grafo semântico + blast-radius).
+
+Skills de **stack pattern** (autorais, conteúdo no repo): `api-design`,
+`backend-patterns`, `frontend-patterns`, `postgres-patterns` e
+`e2e-testing` — padrões opinativos de REST, backend Node, React/Next,
+PostgreSQL e Playwright E2E, prontos no install.
 
 **Python** é necessário para o MCP `code-review-graph` e para os
 harnesses `pytest`/`hypothesis` das skills de guardrail — Python 3.12
