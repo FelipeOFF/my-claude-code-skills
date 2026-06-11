@@ -53,6 +53,7 @@ on install, no setup step.
 | `frontend-patterns` | React/Next idioms: state management, hooks, performance (memoization, code splitting), client/server boundary. |
 | `postgres-patterns` | PostgreSQL query optimization, schema design, indexing strategy, security (RLS, roles). |
 | `e2e-testing` | Playwright E2E: Page Object Model, config, CI/CD integration, artifact handling (screenshots/videos/traces), flaky-test strategies. |
+| `absolute-flutter` | Flutter clean architecture (mobile): `rx_notifier` MVVM controllers, use cases + `Either<AppError,T>`, freezed models, tiered `dio` gateway, `get_it` DI, `drift` TTL cache, `go_router`, i18n (`intl_utils`), FCM push + Branch deep links. Ships 12 `/af-*` commands. Source: [FelipeOFF/absolute-flutter](https://github.com/FelipeOFF/absolute-flutter) (`authored`). |
 
 ## Optional external setup (run `/programming-setup`)
 

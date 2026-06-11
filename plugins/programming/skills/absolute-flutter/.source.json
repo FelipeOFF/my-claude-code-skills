@@ -1,0 +1,26 @@
+{
+  "$schema": "myskills/skill-source@1",
+  "name": "absolute-flutter",
+  "package": "programming",
+  "sync_direction": "pull",
+  "source": {
+    "type": "github",
+    "repo": "FelipeOFF/absolute-flutter",
+    "url": "https://github.com/FelipeOFF/absolute-flutter.git",
+    "ref": "main",
+    "commit": "1bb44cb8430e90cad620943c496fe1c618d0a22f",
+    "skill_path": "skills/absolute-flutter",
+    "skill_file": "SKILL.md",
+    "copy_mode": "skill_dir"
+  },
+  "support_paths": "all_siblings",
+  "frontmatter_policy": "curated",
+  "public_source_field": "authored",
+  "commands": {
+    "source_path": "commands",
+    "pattern": "af-*.md",
+    "dest": "plugins/programming/commands"
+  },
+  "license": "MIT",
+  "vendored_at": "2026-06-11"
+}
