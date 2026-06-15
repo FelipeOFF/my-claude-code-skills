@@ -39,7 +39,28 @@ immediately after `/plugin install programming@myskills`, no setup step.
 | `render-plans-to-html` | [FelipeOFF/render-plans-to-html](https://github.com/FelipeOFF/render-plans-to-html) (`vendored`) | Renders planning Markdown (PLAN.md, REVIEW.md, etc.) as a self-contained HTML dashboard with sidebar nav, mermaid, syntax highlighting — runs via `npx`. |
 | `n-plus-one-guard` | [FelipeOFF/n-plus-one-guard-skill](https://github.com/FelipeOFF/n-plus-one-guard-skill) (`authored`) | Detects/prevents **N+1 SQL queries** and redundant per-item HTTP calls in one request: query-count interceptor, per-endpoint budget asserts, allowlist, eager/prefetch/DataLoader/batch cures. |
 | `race-condition-guard` | [FelipeOFF/race-condition-guard-skill](https://github.com/FelipeOFF/race-condition-guard-skill) (`authored`) | Validates/prevents **race conditions** in concurrent handlers (TOCTOU, lost update, double-submit): atomic updates, locks, constraints, idempotency keys + concurrency & property-based tests that prove the invariant. |
+| `dart-code-linter` | [FelipeOFF/dart_code_linter_skill](https://github.com/FelipeOFF/dart_code_linter_skill) (`authored`) | **dart_code_linter (DCL)** for Dart/Flutter — find & auto-fix rules, metrics (cyclomatic complexity, nesting, params) & anti-patterns at 4 depth levels (L0 report-only → L3 structural refactors): `--reporter=json` parsing, per-rule/metric fix playbook, CI gating, and PR/changed-files mode. Ships `references/`, runnable `scripts/` (run, changed-files, JSON parser, verify gate) and per-level config templates. |
 | `code-review-graph` | [tirth8205/code-review-graph](https://github.com/tirth8205/code-review-graph) (`pip` MCP) | Semantic codebase knowledge graph via MCP — architecture map + blast-radius impact analysis with ~8× fewer tokens. Needs Python (see below). |
+
+## Security pipeline skills (vendored — Anthropic harness)
+
+From [anthropics/defending-code-reference-harness](https://github.com/anthropics/defending-code-reference-harness)
+(Apache-2.0, `source: vendored`). Interactive vulnerability-discovery pipeline.
+The autonomous C/C++ + ASAN pipeline (`harness/`, `bin/vp-sandboxed`,
+`scripts/setup_sandbox.sh`) is **not** bundled — clone the upstream repo
+(`~/Projects/defending-code-reference-harness`) for the sandboxed runs.
+
+| Skill | Scope |
+|---|---|
+| `quickstart` | Front door / orientation for the harness. |
+| `threat-model` | Build a threat model for a codebase (interview / bootstrap / chained). |
+| `vuln-scan` | Static source vuln scan, parallel review subagents → `VULN-FINDINGS.json`. |
+| `triage` | Verify, dedupe, re-rank findings by exploitability. |
+| `patch` | Generate candidate fixes for verified findings (pipeline mode needs the cloned repo). |
+| `customize` | Port the pipeline to another language / vuln class / detector. |
+
+> Original focus: C/C++ memory bugs. For TS/web stacks, drive via `customize`
+> or use the `c-review` / `fp-check` plugins.
 
 ## Stack pattern skills (authored)
 
@@ -122,6 +143,14 @@ dashboard HTML), e as duas autorais de guardrail — `n-plus-one-guard`
 `race-condition-guard` (valida/previne race conditions com locks,
 idempotência e testes de concorrência). O `code-review-graph` é um MCP
 em Python (grafo semântico + blast-radius).
+
+Skills de **security pipeline** (vendorizadas do harness da Anthropic,
+`defending-code-reference-harness`, Apache-2.0): `quickstart`, `threat-model`,
+`vuln-scan`, `triage`, `patch`, `customize` — pipeline interativo de descoberta
+e correção de vulnerabilidades. O pipeline autônomo C/C++ + ASAN (sandbox gVisor)
+não é vendorizado; clone o repo upstream para os runs sandboxed. Foco original é
+bug de memória C/C++; pra stack TS/web, use via `customize` ou os plugins
+`c-review` / `fp-check`.
 
 Skills de **stack pattern** (autorais, conteúdo no repo): `api-design`,
 `backend-patterns`, `frontend-patterns`, `postgres-patterns` e

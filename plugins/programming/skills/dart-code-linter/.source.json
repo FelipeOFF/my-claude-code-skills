@@ -1,0 +1,26 @@
+{
+  "$schema": "myskills/skill-source@1",
+  "name": "dart-code-linter",
+  "package": "programming",
+  "sync_direction": "push",
+  "source": {
+    "type": "github",
+    "repo": "FelipeOFF/dart_code_linter_skill",
+    "url": "https://github.com/FelipeOFF/dart_code_linter_skill.git",
+    "ref": "main",
+    "commit": "1163c4362139ac5492a168f1d58ffe2a3cd8cb64",
+    "skill_path": "",
+    "skill_file": "SKILL.md",
+    "copy_mode": "root_selective"
+  },
+  "support_paths": [
+    "references",
+    "scripts"
+  ],
+  "frontmatter_policy": "authored_mirror",
+  "public_source_field": "authored",
+  "debrand": null,
+  "license": "MIT",
+  "vendored_at": "2026-06-15",
+  "notes": "Autoral no myskills; espelhada para o repo público FelipeOFF/dart_code_linter_skill. Wrapper do dart_code_linter (DCL) para Dart/Flutter."
+}

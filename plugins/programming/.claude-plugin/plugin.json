@@ -1,7 +1,7 @@
 {
   "name": "programming",
-  "version": "0.8.0",
-  "description": "Backend, frontend web e mobile, testing, debugging, infra",
+  "version": "0.10.0",
+  "description": "Backend, frontend web e mobile, testing, debugging, infra, security",
   "author": {
     "name": "Felipe Oliveira",
     "url": "https://github.com/FelipeOFF"
