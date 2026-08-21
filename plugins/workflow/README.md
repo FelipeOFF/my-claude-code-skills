@@ -31,7 +31,7 @@ Available immediately after `/plugin install workflow@myskills` — no setup ste
 
 | Skill | Source | Why it's curated |
 |---|---|---|
-| `caveman`, `diagnose`, `grill-me`, `grill-with-docs`, `handoff`, `improve-codebase-architecture`, `prototype`, `to-issues`, `to-prd`, `triage`, `write-a-skill`, `zoom-out` | [mattpocock/skills](https://github.com/mattpocock/skills) (`vendored`) | Lean workflow toolkit: terse comms (`caveman`), diagnose/grill loops, ADR + handoff docs, architecture deepening, throwaway prototyping, issue/PRD generation, triage, skill authoring, and zoom-out for higher-level maps. |
+| `diagnose`, `grill-me`, `grill-with-docs`, `handoff`, `improve-codebase-architecture`, `prototype`, `to-issues`, `to-prd`, `triage`, `write-a-skill`, `zoom-out` | [mattpocock/skills](https://github.com/mattpocock/skills) (`vendored`) | Lean workflow toolkit: diagnose/grill loops, ADR + handoff docs, architecture deepening, throwaway prototyping, issue/PRD generation, triage, skill authoring, and zoom-out for higher-level maps. |
 | `find-skills` | [vercel-labs/skills](https://github.com/vercel-labs/skills/tree/main/skills/find-skills) (`vendored`) | Discovery and install of new skills via `npx skills find/add` — meta-tool for extending the toolkit on demand. |
 | `llm-wiki` | authored | Karpathy-style LLM wiki pattern — structured, navigable knowledge capture for a codebase/domain. |
 
@@ -96,7 +96,7 @@ requirements → design → tasks → implement) e `sleepwell` (loop autônomo
 overnight com rollback automático e meta-learning).
 
 **Vendorizadas** (conteúdo real no repo): o bundle de workflow da Matt
-Pocock (`caveman`, `diagnose`, `grill-me`, `grill-with-docs`, `handoff`,
+Pocock (`diagnose`, `grill-me`, `grill-with-docs`, `handoff`,
 `improve-codebase-architecture`, `prototype`, `to-issues`, `to-prd`,
 `triage`, `write-a-skill`, `zoom-out`), o `find-skills` (descoberta de
 skills via `npx skills`) e a autoral `llm-wiki`.
